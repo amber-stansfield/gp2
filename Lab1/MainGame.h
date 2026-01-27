@@ -1,8 +1,9 @@
 #pragma once
-
+#include "Model.h"
 #include <SDL\SDL.h>
 #include <GL/glew.h>
 #include "Display.h" 
+#include <cmath>
 
 enum class GameState{PLAY, EXIT};
 
@@ -21,6 +22,7 @@ private:
 	void gameLoop();
 	void drawGame();
 
+	Model _model;
 	Display _gameDisplay;
 	GameState _gameState;
 

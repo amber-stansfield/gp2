@@ -1,7 +1,9 @@
 #include "MainGame.h"
 #include <iostream>
 #include <string>
-
+#include <algorithm>
+#include <cstdint>
+#include <iomanip>
 MainGame::MainGame()
 {
 	_gameState = GameState::PLAY;
@@ -50,6 +52,10 @@ void MainGame::drawGame()
 
 	
 	// old code for testing only 
+
+
+
+
 
 	glBegin(GL_TRIANGLES);
 	glColor3f(0.1f, 0.1f, 0.1f);
@@ -109,6 +115,25 @@ void MainGame::drawGame()
 	glVertex2f(0, 0.75f);
 	glVertex2f(-0.5f, 0.5f);
 	glVertex2f(0.5f, 0.5f);
+	glEnd();
+
+
+
+	glBegin(GL_TRIANGLES);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+
+			float intermediate = _model.poly[i][j] + _model.Transform[j];
+			//_model.poly[i][j] = std::clamp
+		}
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		glVertex3f(_model.poly[i][0], _model.poly[i][1], _model.poly[i][2]);
+	}
 	glEnd();
 
 	_gameDisplay.swapBuffer();
