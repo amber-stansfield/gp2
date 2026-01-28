@@ -3,6 +3,7 @@
 #include <SDL\SDL.h>
 #include <GL/glew.h>
 #include "Display.h" 
+#include "CsvParser.h"
 #include <cmath>
 
 enum class GameState{PLAY, EXIT};
@@ -16,6 +17,8 @@ public:
 	void run();
 
 private:
+
+	void initaliseModels();
 
 	void initSystems();
 	void processInput();

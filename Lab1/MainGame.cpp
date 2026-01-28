@@ -22,7 +22,17 @@ void MainGame::run()
 void MainGame::initSystems()
 {
 	_gameDisplay.initDisplay();
+	initaliseModels();
+
 }
+
+void MainGame::initaliseModels()
+{
+	_model.readModelFile("models\\cube.csv");
+	//cout << ".../gp2/Lab1/models/cube.csv";
+}
+
+
 
 void MainGame::gameLoop()
 {
@@ -52,8 +62,6 @@ void MainGame::drawGame()
 
 	
 	// old code for testing only 
-
-
 
 
 
@@ -118,21 +126,27 @@ void MainGame::drawGame()
 	glEnd();
 
 
+	srand(std::time({}));
+
+
 
 	glBegin(GL_TRIANGLES);
 	glColor3f(1.0f, 1.0f, 1.0f);
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < _model.verts.size(); i++)
 	{
-		for (int j = 0; j < 3; j++)
-		{
-
-			float intermediate = _model.poly[i][j] + _model.Transform[j];
-			//_model.poly[i][j] = std::clamp
-		}
+			//float intermediate = _model.verts[i]+ _model.TransformPos[2];
+			//_model.verts[i] = std::clamp(_model.verts[i], -1, 1);
+		
 	}
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < _model.verts.size(); i+=3)
 	{
-		glVertex3f(_model.poly[i][0], _model.poly[i][1], _model.poly[i][2]);
+		glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
+		vector<float> modelpoint = {0,0,0};
+		modelpoint[0] = _model.verts[i];
+		modelpoint[1] = _model.verts[i+1];
+		modelpoint[2] = _model.verts[i+2];
+		vector<float> worldpoint = _model.modelToWorldPoint(modelpoint);
+		glVertex3d(modelpoint[0],modelpoint[1],modelpoint[2]);
 	}
 	glEnd();
 
