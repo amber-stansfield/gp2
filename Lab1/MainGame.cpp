@@ -4,6 +4,10 @@
 #include <algorithm>
 #include <cstdint>
 #include <iomanip>
+#include <glm/common.hpp>
+#include <glm/matrix.hpp>
+
+using namespace glm;
 MainGame::MainGame()
 {
 	_gameState = GameState::PLAY;
@@ -46,6 +50,7 @@ void MainGame::gameLoop()
 
 void MainGame::processInput()
 {
+	
 	SDL_Event blope;
 	while (SDL_PollEvent(&blope)) {
 		switch(blope.type)
@@ -63,6 +68,8 @@ void MainGame::drawGame()
 	
 	// old code for testing only 
 
+
+	srand(std::time({}));
 
 
 	glBegin(GL_TRIANGLES);
@@ -82,21 +89,21 @@ void MainGame::drawGame()
 
 	glEnableClientState(GL_COLOR_ARRAY);
 	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 0.0f, 0.0f);
+	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
 	glVertex2f(0, -0.5f);
 	glVertex2f(0, 0.25f);
 	glVertex2f(0.5f, 0.5f);
 	glEnd();
 	
 	glBegin(GL_TRIANGLES);
-	glColor3f(0.0f, 1.0f, 0.0f);
+	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
 	glVertex2f(0.5f, -0.25f);
 	glVertex2f(0, -0.5f);
 	glVertex2f(0.5f, 0.5f);
 	glEnd();
 
 	glBegin(GL_TRIANGLES);
-	glColor3f(0.0f, 0.0f, 1.0f);
+	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
 	glVertex2f(0, -0.5f);
 	glVertex2f(0, 0.25f);
 	glVertex2f(-0.5f, -0.25f);
@@ -105,28 +112,26 @@ void MainGame::drawGame()
 	
 
 	glBegin(GL_TRIANGLES);
-	glColor3f(0.0f, 1.0f, 1.0f);
+	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
 	glVertex2f(-0.5f, 0.5f);
 	glVertex2f(0, 0.25f);
 	glVertex2f(-0.5f, -0.25f);
 	glEnd();
 
 	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 0.0f, 1.0f);
+	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
 	glVertex2f(0, 0.25f);
 	glVertex2f(-0.5f, 0.5f);
 	glVertex2f(0.5f, 0.5f);
 	glEnd();
 
 	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
 	glVertex2f(0, 0.75f);
 	glVertex2f(-0.5f, 0.5f);
 	glVertex2f(0.5f, 0.5f);
 	glEnd();
 
-
-	srand(std::time({}));
 
 
 
@@ -141,10 +146,10 @@ void MainGame::drawGame()
 	for (int i = 0; i < _model.verts.size(); i+=3)
 	{
 		glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
-		vector<float> modelpoint = {0,0,0};
-		modelpoint[0] = _model.verts[i];
-		modelpoint[1] = _model.verts[i+1];
-		modelpoint[2] = _model.verts[i+2];
+		vec3 modelpoint = { 0,0,0 };
+		modelpoint.x = _model.verts[i];
+		modelpoint.y = _model.verts[i+1];
+		modelpoint.z = _model.verts[i+2];
 		vector<float> worldpoint = _model.modelToWorldPoint(modelpoint);
 		glVertex3d(modelpoint[0],modelpoint[1],modelpoint[2]);
 	}

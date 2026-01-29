@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cube.csv" />
+    <None Include="VertShader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

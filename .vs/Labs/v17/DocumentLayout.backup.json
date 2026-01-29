@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\",
+  "WorkspaceRootPath": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Display.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Display.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Display.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Display.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Display.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -44,63 +44,60 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Model.h",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Model.h",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.h",
               "RelativeDocumentMoniker": "Lab1\\Model.h",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Model.h",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.h",
               "RelativeToolTip": "Lab1\\Model.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-27T00:17:09.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T00:17:09.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Model.cpp",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Model.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.cpp",
               "RelativeDocumentMoniker": "Lab1\\Model.cpp",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Model.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.cpp",
               "RelativeToolTip": "Lab1\\Model.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-27T00:17:30.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainGame.h",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\MainGame.h",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h",
               "RelativeDocumentMoniker": "Lab1\\MainGame.h",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\MainGame.h",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h",
               "RelativeToolTip": "Lab1\\MainGame.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-26T14:00:31.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T14:00:31.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Display.h",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Display.h",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h",
               "RelativeDocumentMoniker": "Lab1\\Display.h",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Display.h",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h",
               "RelativeToolTip": "Lab1\\Display.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-26T14:04:10.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T14:04:10.764Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainGame.cpp",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\MainGame.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.cpp",
               "RelativeDocumentMoniker": "Lab1\\MainGame.cpp",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\MainGame.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.cpp",
               "RelativeToolTip": "Lab1\\MainGame.cpp",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAuwIEAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAuwIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-26T13:41:59.851Z",
               "EditorCaption": ""
@@ -109,9 +106,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\main.cpp",
               "RelativeDocumentMoniker": "Lab1\\main.cpp",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\main.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\main.cpp",
               "RelativeToolTip": "Lab1\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -121,9 +118,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Display.cpp",
-              "DocumentMoniker": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Display.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp",
               "RelativeDocumentMoniker": "Lab1\\Display.cpp",
-              "ToolTip": "C:\\Users\\Jade\\Desktop\\gamesProgramming\\gp2\\Lab1\\Display.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp",
               "RelativeToolTip": "Lab1\\Display.cpp",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

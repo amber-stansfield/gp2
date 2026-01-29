@@ -1,6 +1,10 @@
 #pragma once
 #include "CsvParser.h"
 #include <vector>
+#include <glm/common.hpp>
+
+
+using namespace glm;
 //#include <iostream>
 
 class Model
@@ -10,13 +14,11 @@ public:
 	Model();
 	~Model();
 
-	vector<float> modelToWorldPoint(vector<float>);
+	vec3 modelToWorldPoint(vec3);
 
-	vector<float> transformVector(vector<float>, vector<float>, vector<float>, vector<float>);
+	vec3 transformVector(vec3 );
 
-	vector<float> getBasisVectorI();
-	vector<float> getBasisVectorJ();
-	vector<float> getBasisVectorK();
+	vec3 getBasisVector();
 
 	float yaw = 45;
 	void readModelFile(string);

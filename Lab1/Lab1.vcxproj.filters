@@ -47,5 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cube.csv" />
+    <None Include="VertShader.vert" />
   </ItemGroup>
 </Project>
