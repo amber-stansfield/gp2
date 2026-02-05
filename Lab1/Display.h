@@ -14,6 +14,10 @@ public:
 	void initDisplay();
 	void swapBuffer();
 
+
+	void clearDisplay();
+	SDL_GLContext _context;
+
 private:
 
 	void returnError(std::string errorString);

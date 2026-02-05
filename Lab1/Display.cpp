@@ -10,6 +10,15 @@ Display::Display()
 
 Display::~Display()
 {
+	SDL_GL_DeleteContext(_context);
+	SDL_DestroyWindow(_window);
+	SDL_Quit();
+}
+
+void clearDisplay()
+{
+	glClearDepth(1.0);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void Display::returnError(std::string errorString)

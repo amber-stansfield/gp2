@@ -1,5 +1,5 @@
 #pragma once
-#include "Model.h"
+#include "Mesh.h"
 #include <SDL\SDL.h>
 #include <GL/glew.h>
 #include "Display.h" 
@@ -25,7 +25,7 @@ private:
 	void gameLoop();
 	void drawGame();
 
-	Model _model;
+	Mesh _mesh;
 	Display _gameDisplay;
 	GameState _gameState;
 

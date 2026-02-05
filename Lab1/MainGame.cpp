@@ -32,7 +32,7 @@ void MainGame::initSystems()
 
 void MainGame::initaliseModels()
 {
-	_model.readModelFile("models\\cube.csv");
+	//_model.readModelFile("models\\cube.csv");
 	//cout << ".../gp2/Lab1/models/cube.csv";
 }
 
@@ -62,14 +62,10 @@ void MainGame::processInput()
 
 void MainGame::drawGame()
 {
-	glClearDepth(1.0); 
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear colour and depth buffer - set colour to colour defined in glClearColor
-
-	
-	// old code for testing only 
-
+	_gameDisplay.clearDisplay();
 
 	srand(std::time({}));
+
 
 
 	glBegin(GL_TRIANGLES);
@@ -135,25 +131,25 @@ void MainGame::drawGame()
 
 
 
-	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	for (int i = 0; i < _model.verts.size(); i++)
-	{
-			//float intermediate = _model.verts[i]+ _model.TransformPos[2];
-			//_model.verts[i] = std::clamp(_model.verts[i], -1, 1);
-		
-	}
-	for (int i = 0; i < _model.verts.size(); i+=3)
-	{
-		glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
-		vec3 modelpoint = { 0,0,0 };
-		modelpoint.x = _model.verts[i];
-		modelpoint.y = _model.verts[i+1];
-		modelpoint.z = _model.verts[i+2];
-		vector<float> worldpoint = _model.modelToWorldPoint(modelpoint);
-		glVertex3d(modelpoint[0],modelpoint[1],modelpoint[2]);
-	}
-	glEnd();
+	//glBegin(GL_TRIANGLES);
+	//glColor3f(1.0f, 1.0f, 1.0f);
+	//for (int i = 0; i < _model.verts.size(); i++)
+	//{
+	//		//float intermediate = _model.verts[i]+ _model.TransformPos[2];
+	//		//_model.verts[i] = std::clamp(_model.verts[i], -1, 1);
+	//	
+	//}
+	//for (int i = 0; i < _model.verts.size(); i+=3)
+	//{
+	//	glColor3f((float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX, (float)rand() / (float)RAND_MAX);
+	//	vec3 modelpoint = { 0,0,0 };
+	//	modelpoint.x = _model.verts[i];
+	//	modelpoint.y = _model.verts[i+1];
+	//	modelpoint.z = _model.verts[i+2];
+	//	vector<float> worldpoint = _model.modelToWorldPoint(modelpoint);
+	//	glVertex3d(modelpoint[0],modelpoint[1],modelpoint[2]);
+	//}
+	//glEnd();
 
 	_gameDisplay.swapBuffer();
 }

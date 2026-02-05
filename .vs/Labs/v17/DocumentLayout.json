@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\CsvParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\CsvParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\VertShader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\VertShader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -46,43 +50,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Shader.cpp",
+              "RelativeDocumentMoniker": "Lab1\\Shader.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Shader.cpp",
+              "RelativeToolTip": "Lab1\\Shader.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-02T14:20:20.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Shader.h",
+              "RelativeDocumentMoniker": "Lab1\\Shader.h",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Shader.h",
+              "RelativeToolTip": "Lab1\\Shader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-02T14:19:14.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CsvParser.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\CsvParser.cpp",
               "RelativeDocumentMoniker": "Lab1\\CsvParser.cpp",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\CsvParser.cpp",
               "RelativeToolTip": "Lab1\\CsvParser.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-29T14:40:14.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VertShader.vert",
-              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\VertShader.vert",
-              "RelativeDocumentMoniker": "Lab1\\VertShader.vert",
-              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\VertShader.vert",
-              "RelativeToolTip": "Lab1\\VertShader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-01-29T14:28:13.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Model.h",
-              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.h",
-              "RelativeDocumentMoniker": "Lab1\\Model.h",
-              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.h",
-              "RelativeToolTip": "Lab1\\Model.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Mesh.h",
+              "RelativeDocumentMoniker": "Lab1\\Mesh.h",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Mesh.h",
+              "RelativeToolTip": "Lab1\\Mesh.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-01-27T00:17:09.507Z",
               "EditorCaption": ""
@@ -90,56 +107,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Model.cpp",
-              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.cpp",
-              "RelativeDocumentMoniker": "Lab1\\Model.cpp",
-              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Model.cpp",
-              "RelativeToolTip": "Lab1\\Model.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAPAAAAAAAAAA==",
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Mesh.cpp",
+              "RelativeDocumentMoniker": "Lab1\\Mesh.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Mesh.cpp",
+              "RelativeToolTip": "Lab1\\Mesh.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-27T00:17:30.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MainGame.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h",
               "RelativeDocumentMoniker": "Lab1\\MainGame.h",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.h",
               "RelativeToolTip": "Lab1\\MainGame.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-26T14:00:31.095Z"
+              "WhenOpened": "2026-01-26T14:00:31.095Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Display.h",
-              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h",
-              "RelativeDocumentMoniker": "Lab1\\Display.h",
-              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h",
-              "RelativeToolTip": "Lab1\\Display.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-26T14:04:10.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainGame.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.cpp",
               "RelativeDocumentMoniker": "Lab1\\MainGame.cpp",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\MainGame.cpp",
               "RelativeToolTip": "Lab1\\MainGame.cpp",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-26T13:41:59.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Display.h",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h",
+              "RelativeDocumentMoniker": "Lab1\\Display.h",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.h",
+              "RelativeToolTip": "Lab1\\Display.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-26T14:04:10.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Display.cpp",
+              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp",
+              "RelativeDocumentMoniker": "Lab1\\Display.cpp",
+              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp",
+              "RelativeToolTip": "Lab1\\Display.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-26T13:42:01.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\main.cpp",
               "RelativeDocumentMoniker": "Lab1\\main.cpp",
@@ -148,18 +180,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-26T13:41:57.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Display.cpp",
-              "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp",
-              "RelativeDocumentMoniker": "Lab1\\Display.cpp",
-              "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\GP2-Lab1\\gp2\\Lab1\\Display.cpp",
-              "RelativeToolTip": "Lab1\\Display.cpp",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-26T13:42:01.574Z"
             }
           ]
         }
