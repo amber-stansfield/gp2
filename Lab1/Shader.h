@@ -5,17 +5,17 @@
 class Shader
 {
 public:
-	Shader(const std::string&);
+	Shader(const std::string& filename);
 
 	void Bind(); //Set gpu to use our shaders
 
-	std::string LoadShader(const std::string& fileName);
-	void CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const std::string& errorMessage);
-	GLuint CreateShader(const std::string& text, unsigned int type);
+	std::string Shader::LoadShader(const std::string& fileName);
+	void Shader::CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const std::string& errorMessage);
+	GLuint Shader::CreateShader(const std::string& text, unsigned int type);
 
 
 
-	~Shader();
+	virtual ~Shader();
 
 
 protected:
@@ -27,4 +27,3 @@ private:
 	GLuint program; // Track the shader program
 	GLuint shaders[NUM_SHADERS]; //array of shaders
 };
-

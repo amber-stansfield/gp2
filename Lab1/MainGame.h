@@ -1,10 +1,10 @@
 #pragma once
-#include "Mesh.h"
 #include <SDL\SDL.h>
 #include <GL/glew.h>
 #include "Display.h" 
-#include "CsvParser.h"
-#include <cmath>
+#include "Shader.h"
+#include "Mesh.h"
+
 
 enum class GameState{PLAY, EXIT};
 
@@ -18,16 +18,14 @@ public:
 
 private:
 
-	void initaliseModels();
-
 	void initSystems();
 	void processInput();
 	void gameLoop();
 	void drawGame();
 
-	Mesh _mesh;
 	Display _gameDisplay;
 	GameState _gameState;
+	glm::vec3 vec3example;
 
 };
 

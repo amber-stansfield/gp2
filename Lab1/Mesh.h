@@ -2,7 +2,6 @@
 #include <glm\glm.hpp>
 #include <GL\glew.h>
 
-using namespace glm;
 class Vertex
 {
 public:
@@ -12,28 +11,26 @@ public:
 	}
 protected:
 private:
-	vec3 pos;
+	glm::vec3 pos;
 };
-
 
 class Mesh
 {
 public:
-	Mesh();
-	Mesh(Vertex* verts, unsigned int vertNum);
+	Mesh(Vertex* vertices, unsigned int numVertices);
 	~Mesh();
 
 	void Draw();
 private:
-
+	
 	enum
 	{
 		POSITION_VERTEXBUFFER,
 		NUM_BUFFERS
 	};
 
-	GLuint VAO;
-	GLuint VAB[NUM_BUFFERS]; // create our array of buffers
+	GLuint vertexArrayObject;
+	GLuint vertexArrayBuffers[NUM_BUFFERS]; // create our array of buffers
 	unsigned int drawCount; //how much of the vertexArrayObject do we want to draw
 };
 

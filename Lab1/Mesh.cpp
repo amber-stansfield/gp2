@@ -1,44 +1,33 @@
 #include "Mesh.h"
 
 
-Mesh::Mesh() {};
-
-Mesh::Mesh(Vertex* verts,unsigned int vertNum)
+Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 {
-	drawCount = vertNum;
-	glGenVertexArrays(1, &VAO);
-	glBindVertexArray(VAO);
-	glGenBuffers(NUM_BUFFERS, VAB);
-	glBindBuffer(GL_ARRAY_BUFFER, VAB[POSITION_VERTEXBUFFER]);
-	glBufferData(GL_ARRAY_BUFFER, vertNum * sizeof(verts[0]), verts, GL_STATIC_DRAW);
+	drawCount = numVertices;
+
+	glGenVertexArrays(1, &vertexArrayObject); //generate a vertex array and store it in the VAO
+	glBindVertexArray(vertexArrayObject); //bind the VAO (any operation that works on a VAO will work on our bound VAO - binding)
+
+	glGenBuffers(NUM_BUFFERS, vertexArrayBuffers); //generate our buffers based of our array of data/buffers - GLuint vertexArrayBuffers[NUM_BUFFERS];
+	glBindBuffer(GL_ARRAY_BUFFER, vertexArrayBuffers[POSITION_VERTEXBUFFER]); //tell opengl what type of data the buffer is (GL_ARRAY_BUFFER), and pass the data
+	glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(vertices[0]), vertices, GL_STATIC_DRAW); //move the data to the GPU - type of data, size of data, starting address (pointer) of data, where do we store the data on the GPU
+
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	glBindVertexArray(0);
 
+	glBindVertexArray(0); // unbind our VAO
 }
+
 
 Mesh::~Mesh()
 {
-	glDeleteVertexArrays(1, &VAO);
+	glDeleteVertexArrays(1, &vertexArrayObject); // delete arrays
 }
 
 void Mesh::Draw()
 {
-
-
-	Vertex verts[3]{
-		Vertex(vec3(-0.5, -0.5, 0)),
-		Vertex(vec3(0, 0.5, 0)),
-		Vertex(vec3(0.5, -0.5, 0))
-	};
-
-	glBindVertexArray(VAO);
-
-
+	glBindVertexArray(vertexArrayObject);
 	glDrawArrays(GL_TRIANGLES, 0, drawCount);
 	glBindVertexArray(0);
-
-
-
-
 }
+
