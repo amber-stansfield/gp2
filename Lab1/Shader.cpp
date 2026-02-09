@@ -13,13 +13,22 @@ Shader::Shader(const std::string& filename)
 		glAttachShader(program, shaders[i]); //add all our shaders to the shader program "shaders" 
 	}
 
-	glBindAttribLocation(program, 0, "position"); //
+	glBindAttribLocation(program, 0, "position");
+	glBindAttribLocation(program, 1, "texCoord");
 
 	glLinkProgram(program); //create executables that will run on the GPU shaders
-	CheckShaderError(program, GL_LINK_STATUS, true, "Error: Shader program linking failed"); // cheack for error
+
+	uniforms[TRANSFORM_U] = glGetUniformLocation(program, "transform");
+	CheckShaderError(program, GL_LINK_STATUS, true, "Error: Shader program linking failed"); // check for error
 
 	glValidateProgram(program); //check the entire program is valid
 	CheckShaderError(program, GL_VALIDATE_STATUS, true, "Error: Shader program not valid");
+}
+
+void Shader::Update(const Transform& transform)
+{
+	glm::mat4 model = transform.GetModel();
+	glUniformMatrix4fv(uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
 }
 
 

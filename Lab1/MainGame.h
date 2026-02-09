@@ -4,6 +4,7 @@
 #include "Display.h" 
 #include "Shader.h"
 #include "Mesh.h"
+#include "Texture.h"
 
 
 enum class GameState{PLAY, EXIT};
@@ -16,12 +17,23 @@ public:
 
 	void run();
 
+
+protected:
+
 private:
 
 	void initSystems();
 	void processInput();
 	void gameLoop();
 	void drawGame();
+
+	float counter = 0;
+
+	Mesh* mesh;
+	Shader* shader;
+	Texture* texture;
+	Transform transform;
+
 
 	Display _gameDisplay;
 	GameState _gameState;
