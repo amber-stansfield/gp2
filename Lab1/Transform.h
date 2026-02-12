@@ -26,7 +26,18 @@ public:
 		glm::mat4 rotZ = glm::rotate(rot.z, glm::vec3(0.0, 0.0, 1.0));
 		glm::mat4 rotMat = rotX * rotY * rotZ;
 
+
+
+
 		return posMat * rotMat * scaleMat;
+	}
+
+	inline glm::mat4 GetMVP(const Camera& camera) const
+	{
+		glm::mat4 VP = camera.GetViewProjection();
+		glm::mat4 M = GetModel();
+
+		return VP * M;//camera.GetViewProjection() * GetModel();
 	}
 
 	inline glm::vec3* GetPos() { return &pos; } //getters

@@ -1,4 +1,9 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Labs.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   MainGame.cpp
-C:\Users\aaron\Desktop\glooper\GP2-Lab1\gp2\Lab1\MainGame.cpp(109,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Lab1.vcxproj -> C:\Users\aaron\Desktop\glooper\GP2-Lab1\gp2\Debug\Lab1.exe
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(119,87): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(119,87): warning C4244:         with
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(119,87): warning C4244:         [
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(119,87): warning C4244:             _Rep=__int64
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(119,87): warning C4244:         ]
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(167,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Lab1.vcxproj -> C:\Users\aaron\Desktop\glooper\gp2\Debug\Lab1.exe

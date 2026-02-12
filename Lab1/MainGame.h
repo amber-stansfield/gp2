@@ -5,6 +5,11 @@
 #include "Shader.h"
 #include "Mesh.h"
 #include "Texture.h"
+#include "chrono"
+#include "iostream"
+#include "windows.h"
+#include <SDL/SDL_syswm.h>
+#include <GL/gl.h>
 
 
 enum class GameState{PLAY, EXIT};
@@ -28,6 +33,13 @@ private:
 	void drawGame();
 
 	float counter = 0;
+
+
+	long frameTime;
+
+	std::chrono::high_resolution_clock _clock;
+	
+	float cameraSens;
 
 	Mesh* mesh;
 	Shader* shader;

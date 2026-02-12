@@ -4,8 +4,8 @@
 Display::Display()
 {
 	sdlWindow = nullptr; //initialise to generate null access violation for debugging. 
-	screenWidth = 1024;
-	screenHeight = 768; 
+	screenWidth = 800;
+	screenHeight = 800; 
 }
 
 Display::~Display()

@@ -2,6 +2,7 @@
 #include <string>
 #include <GL\glew.h>
 #include "transform.h"
+#include "camera.h"
 
 class Shader
 {
@@ -18,6 +19,9 @@ public:
 
 	GLuint Shader::CreateShader(const std::string& text, unsigned int type);
 
+
+	Camera* _camera;
+
 	~Shader();
 
 
@@ -33,7 +37,6 @@ private:
 		NUM_UNIFORMS
 
 	};
-
 	GLuint program; // Track the shader program GLuint shaders[NUM_SHADERS];
 	GLuint shaders[NUM_SHADERS];//array of shaders
 	GLuint uniforms[NUM_UNIFORMS]; //no of uniform variables

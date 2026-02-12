@@ -4,6 +4,7 @@
 
 Shader::Shader(const std::string& filename)
 {
+	_camera = new Camera(glm::vec3(0, 0, -5), 5, 1, 0.1, 100);
 	program = glCreateProgram(); // create shader program (openGL saves as ref number)
 	shaders[0] = CreateShader(LoadShader("..\\res\\shader.vert"), GL_VERTEX_SHADER); // create vertex shader
 	shaders[1] = CreateShader(LoadShader("..\\res\\shader.frag"), GL_FRAGMENT_SHADER); // create fragment shader
@@ -17,6 +18,8 @@ Shader::Shader(const std::string& filename)
 	glBindAttribLocation(program, 1, "texCoord");
 
 	glLinkProgram(program); //create executables that will run on the GPU shaders
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
 
 	uniforms[TRANSFORM_U] = glGetUniformLocation(program, "transform");
 	CheckShaderError(program, GL_LINK_STATUS, true, "Error: Shader program linking failed"); // check for error
@@ -27,7 +30,7 @@ Shader::Shader(const std::string& filename)
 
 void Shader::Update(const Transform& transform)
 {
-	glm::mat4 model = transform.GetModel();
+	glm::mat4 model = transform.GetMVP(*_camera);
 	glUniformMatrix4fv(uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
 }
 
