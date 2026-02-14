@@ -49,6 +49,7 @@ public:
 	}
 
 	float camSens = 5;
+	float moveSpeed = 500;
 
 protected:
 private:

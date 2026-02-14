@@ -104,6 +104,7 @@ void MainGame::initSystems()
 
 
 	cameraSens = shader->_camera->camSens;
+	moveSpeed = shader->_camera->moveSpeed;
 
 }
 
@@ -117,7 +118,7 @@ void MainGame::gameLoop()
 		processInput();
 		auto end = _clock.now();
 		frameTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
-		cout << frameTime;
+		//cout << frameTime;
 	}
 }
 
@@ -133,11 +134,32 @@ void MainGame::processInput()
 		case SDL_MOUSEMOTION:
 			shader->_camera->RotateY(evnt.motion.xrel * (frameTime / 1000.0f) * cameraSens);
 			shader->_camera->Pitch(-evnt.motion.yrel * (frameTime / 1000.0f) * cameraSens);
+			break;
 
-	
+		case SDL_KEYDOWN:
+			switch (evnt.key.keysym.sym)
+			{
+			case SDLK_w:
+
+				shader->_camera->MoveForward(1 * (frameTime / 1000.0f) * moveSpeed);
+				break;
+			case SDLK_s:
+
+				shader->_camera->MoveForward(-1 * (frameTime / 1000.0f) * moveSpeed);
+				break;
+			case SDLK_d:
+
+				shader->_camera->MoveRight(1 * (frameTime / 1000.0f) * moveSpeed);
+				break;
+			case SDLK_a:
+
+				shader->_camera->MoveRight(-1 * (frameTime / 1000.0f) * moveSpeed);
+				break;
+			
+			}
+			
+
 		}
-
-		
 	}
 	
 }

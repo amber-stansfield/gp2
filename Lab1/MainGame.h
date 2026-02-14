@@ -40,6 +40,7 @@ private:
 	std::chrono::high_resolution_clock _clock;
 	
 	float cameraSens;
+	float moveSpeed;
 
 	Mesh* mesh;
 	Shader* shader;
