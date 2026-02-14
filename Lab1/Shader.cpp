@@ -4,7 +4,7 @@
 
 Shader::Shader(const std::string& filename)
 {
-	_camera = new Camera(glm::vec3(0, 0, -5), 5, 1, 0.1, 100);
+
 	program = glCreateProgram(); // create shader program (openGL saves as ref number)
 	shaders[0] = CreateShader(LoadShader("..\\res\\shader.vert"), GL_VERTEX_SHADER); // create vertex shader
 	shaders[1] = CreateShader(LoadShader("..\\res\\shader.frag"), GL_FRAGMENT_SHADER); // create fragment shader
@@ -28,10 +28,11 @@ Shader::Shader(const std::string& filename)
 	CheckShaderError(program, GL_VALIDATE_STATUS, true, "Error: Shader program not valid");
 }
 
-void Shader::Update(const Transform& transform)
+void Shader::Update(const Transform& transform, const Camera& camera)
 {
-	glm::mat4 model = transform.GetMVP(*_camera);
+	glm::mat4 model = transform.GetMVP(camera);
 	glUniformMatrix4fv(uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
+
 }
 
 

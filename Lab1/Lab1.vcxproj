@@ -95,6 +95,7 @@
   <ItemGroup>
     <Image Include="..\..\..\GP2-Lab3 Starter\GP2-Lab3 Starter\res\bricks.jpg" />
     <Image Include="..\..\..\GP2-Lab3 Starter\GP2-Lab3 Starter\res\Water.jpg" />
+    <Image Include="..\res\pikman.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

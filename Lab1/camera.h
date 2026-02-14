@@ -13,6 +13,7 @@ public:
 		this->forward = glm::vec3(0.0f, 0.0f, 1.0f);
 		this->up = glm::vec3(0.0f, 1.0f, 0.0f);
 		this->projection = glm::perspective(fov, aspect, zNear, zFar);
+		startY = pos.y;
 	}
 
 	inline glm::mat4 GetViewProjection() const
@@ -23,6 +24,7 @@ public:
 	void MoveForward(float amt)
 	{
 		pos += forward * amt;
+		if (!isJumping) { pos.y = startY; }
 	}
 
 	void MoveRight(float amt)
@@ -48,11 +50,13 @@ public:
 		up = glm::vec3(glm::normalize(rotation * glm::vec4(up, 0.0)));
 	}
 
-	float camSens = 5;
-	float moveSpeed = 500;
+	float camSens = 3;
+	float moveSpeed = 20;
 
 protected:
 private:
+	bool isJumping = false;
+	float startY;
 	glm::mat4 projection;
 	glm::vec3 pos;
 	glm::vec3 forward;

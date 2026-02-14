@@ -14,5 +14,6 @@ public:
 protected:
 private:
 
+	float aniso = 2.0f;
 	GLuint textureHandler;
 };

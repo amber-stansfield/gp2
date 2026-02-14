@@ -20,6 +20,9 @@ public:
 	MainGame();
 	~MainGame();
 
+
+	Camera* _camera;
+
 	void run();
 
 
@@ -34,22 +37,30 @@ private:
 
 	float counter = 0;
 
+	const Uint8* keystate = 0;
 
-	long frameTime;
+	long long frameTime;
 
 	std::chrono::high_resolution_clock _clock;
 	
 	float cameraSens;
 	float moveSpeed;
-
-	Mesh* mesh;
+	
 	Shader* shader;
-	Texture* texture;
-	Transform transform;
+
+	Mesh* floor;
+	Shader* floorShader;
+	Texture* floorTexture;
+	Transform floorTransform;
+
+	Mesh* cube;
+	Texture* cubeTexture;
+	Transform cubeTransform;
 
 
 	Display _gameDisplay;
 	GameState _gameState;
+
 	glm::vec3 vec3example;
 
 };

@@ -17,8 +17,7 @@ public:
 
 	glm::vec3 pos;
 	glm::vec2 texCoord;
-protected:
-private:
+
 };
 
 class Mesh
@@ -37,6 +36,7 @@ private:
 		NUM_BUFFERS
 	};
 
+	GLuint elementArrayBuffer;
 	GLuint vertexArrayObject;
 	GLuint vertexArrayBuffers[NUM_BUFFERS]; // create our array of buffers
 	unsigned int drawCount; //how much of the vertexArrayObject do we want to draw

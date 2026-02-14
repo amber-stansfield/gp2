@@ -4,8 +4,8 @@
 Display::Display()
 {
 	sdlWindow = nullptr; //initialise to generate null access violation for debugging. 
-	screenWidth = 800;
-	screenHeight = 800; 
+	screenWidth = 1920;
+	screenHeight = 1080; 
 }
 
 Display::~Display()
@@ -64,5 +64,5 @@ void Display::initDisplay()
 		returnError("GLEW failed to initialise");
 	}
 
-	glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+	glClearColor(0.13f, 0.6f, 0.71f, 0.0f);
 }

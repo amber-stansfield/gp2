@@ -3,75 +3,75 @@
 #include <string>
 
 
-Vertex vertices[] = { /*Vertex(glm::vec3(0, 0, 0), glm::vec2(1,0)),
-						Vertex(glm::vec3(0, 0, 1), glm::vec2(0,1)),
-						Vertex(glm::vec3(0, 1, 1), glm::vec2(0.5,0)),*/
+Vertex cubeVertices[] = {
 
-						//Vertex(glm::vec3(0, 1, 1), glm::vec2(0,1)),
-						//Vertex(glm::vec3(0, 1, 0), glm::vec2(1,1)),
-						//Vertex(glm::vec3(0, 0, 0), glm::vec2(0,0)),
+						//  front face
 
-						
-						// front face
-						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(-0.5, 0.5, -0.5), glm::vec2(0,1)),
-						Vertex(glm::vec3(0.5, 0.5, -0.5), glm::vec2(0,0)),
-
-						Vertex(glm::vec3(0.5, 0.5, -0.5), glm::vec2(0,0)),
 						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,0)),
-						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,0)),
+						Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(1,1)),
 
-						// top face
-						Vertex(glm::vec3(-0.5, -0.5, 0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,1)),
-						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(0,0)),
-
-
-						Vertex(glm::vec3(0.5, -0.5, 0.5), glm::vec2(0,1)),
-						Vertex(glm::vec3(-0.5, -0.5, 0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
-
-						// bottom face
-
-						Vertex(glm::vec3(-0.5, 0.5, 0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(0.5, 0.5, -0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(-0.5, 0.5, -0.5), glm::vec2(0,1)),
-
-
-						Vertex(glm::vec3(0.5, 0.5, 0.5), glm::vec2(0,1)),
-						Vertex(glm::vec3(0.5, 0.5, -0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(-0.5, 0.5, 0.5), glm::vec2(0,0)),
-
-						// left side face
-						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(-0.5, 0.5, 0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(-0.5, 0.5, -0.5), glm::vec2(0,1)),
-
-
-						Vertex(glm::vec3(-0.5, -0.5, 0.5), glm::vec2(1,0)),
-						Vertex(glm::vec3(-0.5, 0.5, 0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(1,1)),
-
-						// right side face
-						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(0.5, 0.5, -0.5), glm::vec2(0,1)),
-						Vertex(glm::vec3(0.5, 0.5, 0.5), glm::vec2(0,0)),
-
-						Vertex(glm::vec3(0.5, 0.5, 0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(0.5, -0.5, 0.5), glm::vec2(1,0)),
-						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(0,1)),
+						Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,0)),
 
 						// back face
-						Vertex(glm::vec3(-0.5, -0.5, 0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(0.5, 0.5, 0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(-0.5, 0.5, 0.5), glm::vec2(0,1)),
-
-						Vertex(glm::vec3(0.5, 0.5, 0.5), glm::vec2(0,0)),
-						Vertex(glm::vec3(-0.5, -0.5, 0.5), glm::vec2(1,1)),
-						Vertex(glm::vec3(0.5, -0.5, 0.5), glm::vec2(1,0)),
-						
+						Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(1,0)),
+						Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(0,0)),
+						Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(1,1)),
 
 
+						Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(0,1)),
+						Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(0,0)),
+
+						// top face
+						Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(0,1)),
+						Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,0)),
+
+						Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(0,0)),
+						Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,0)),
+						Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(0,1)),
+
+						// bottom face
+						Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(1,0)),
+						Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
+
+						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,1)),
+						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+
+						// left face
+						Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(1,0)),
+						Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+						Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(1,1)),
+
+						Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(0,1)),
+						Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+
+						// right face
+						Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(1,0)),
+						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(0,0)),
+						Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,1)),
+
+						Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(0,1)),
+						Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,1)),
+						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(0,0))
+};
+
+Vertex floorVertices[] = {
+
+	// top face
+	Vertex(glm::vec3(0.5,  0.0, -0.5), glm::vec2(1,1)),
+	Vertex(glm::vec3(-0.5,  0.0, -0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(0.5,  0.0,  0.5), glm::vec2(1,0)),
+
+	Vertex(glm::vec3(-0.5,  0.0,  0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(0.5,  0.0,  0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(-0.5,  0.0, -0.5), glm::vec2(0,1)),
 };
 
 MainGame::MainGame()
@@ -94,17 +94,20 @@ void MainGame::run()
 
 void MainGame::initSystems()
 {
-
 	_gameDisplay.initDisplay(); 
+
+	_camera = new Camera(glm::vec3(0, 0, -5), 5, 1.777778f, 0.1f, 100);
+
 	SDL_SetRelativeMouseMode(SDL_TRUE);
-	mesh = new Mesh(vertices, sizeof(vertices) / sizeof(vertices[0])); //size calcuated by number of bytes of an array / no bytes of one element
-
+	cube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0])); //size calcuated by number of bytes of an array / no bytes of one element
 	shader = new Shader("..\\res\\shader"); //new shader
-	texture = new Texture("..\\res\\bricks.jpg");
+	cubeTexture = new Texture("..\\res\\pikman.jpg");
 
+	floor = new Mesh(floorVertices, sizeof(floorVertices) / sizeof(floorVertices[0]));
+	floorTexture = new Texture("..\\res\\Bricks.jpg");
 
-	cameraSens = shader->_camera->camSens;
-	moveSpeed = shader->_camera->moveSpeed;
+	cameraSens = _camera->camSens;
+	moveSpeed = _camera->moveSpeed;
 
 }
 
@@ -112,13 +115,15 @@ void MainGame::gameLoop()
 {
 	while (_gameState != GameState::EXIT)
 	{
+
 		auto begin = _clock.now();
 		
 		drawGame();
 		processInput();
 		auto end = _clock.now();
 		frameTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
-		//cout << frameTime;
+		cout << "frames: " << frameTime * 0.001f << "\n";
+
 	}
 }
 
@@ -126,39 +131,36 @@ void MainGame::processInput()
 {
 	SDL_Event evnt;
 
+	keystate = SDL_GetKeyboardState(NULL);
 
-	while(SDL_PollEvent(&evnt) && shader->_camera != NULL) //get and process events
+	if (keystate[SDL_SCANCODE_W])
+	{
+		_camera->MoveForward((frameTime * 0.001f) * moveSpeed);
+	}
+	else if (keystate[SDL_SCANCODE_S])
+	{
+
+		_camera->MoveForward((frameTime * 0.001f) * -moveSpeed);
+	}
+	if (keystate[SDL_SCANCODE_D])
+	{
+		_camera->MoveRight((frameTime * 0.001f) * moveSpeed);
+	}
+	else if (keystate[SDL_SCANCODE_A])
+	{
+
+		_camera->MoveRight((frameTime * 0.001f) * -moveSpeed);
+	}
+
+	//Sleep(16.8f);
+	while(SDL_PollEvent(&evnt) && _camera != NULL) //get and process events
 	{
 		switch (evnt.type)
 		{
 		case SDL_MOUSEMOTION:
-			shader->_camera->RotateY(evnt.motion.xrel * (frameTime / 1000.0f) * cameraSens);
-			shader->_camera->Pitch(-evnt.motion.yrel * (frameTime / 1000.0f) * cameraSens);
+			_camera->RotateY(evnt.motion.xrel * (frameTime * 0.001f) * cameraSens);
+			_camera->Pitch(-evnt.motion.yrel * (frameTime * 0.001f) * cameraSens);
 			break;
-
-		case SDL_KEYDOWN:
-			switch (evnt.key.keysym.sym)
-			{
-			case SDLK_w:
-
-				shader->_camera->MoveForward(1 * (frameTime / 1000.0f) * moveSpeed);
-				break;
-			case SDLK_s:
-
-				shader->_camera->MoveForward(-1 * (frameTime / 1000.0f) * moveSpeed);
-				break;
-			case SDLK_d:
-
-				shader->_camera->MoveRight(1 * (frameTime / 1000.0f) * moveSpeed);
-				break;
-			case SDLK_a:
-
-				shader->_camera->MoveRight(-1 * (frameTime / 1000.0f) * moveSpeed);
-				break;
-			
-			}
-			
-
 		}
 	}
 	
@@ -169,24 +171,41 @@ void MainGame::drawGame()
 {
 	_gameDisplay.clearDisplay();
 
+	GLint loc1 = glGetUniformLocation(shader->program, "wibble");
+	glUniform1f(loc1, 0.0f);
+
+	floorTransform.SetRot(glm::vec3(-1.55, 0, 0));
+	floorTransform.SetPos(glm::vec3(0, 3, 3));
+
+	floorTransform.SetScale(glm::vec3(100, 100, 1));
 
 
-	//Vertex vertices[] = { Vertex(glm::vec3(-0.5, -0.5, 0), glm::vec2(0.0, 0.0)),
-	//Vertex(glm::vec3(0, 0.5, 0), glm::vec2(0.5, 1.0)),
-	//Vertex(glm::vec3(0.5, -0.5, 0), glm::vec2(1.0, 0.0)) };
+	shader->Update(floorTransform, *_camera);
+	floorTexture->Bind(0);
+	floor->Draw();
 
-	transform.SetPos(glm::vec3(0, 0, 1));
-	transform.SetRot(glm::vec3(0.5, counter / 4, 180));
+
+	GLint loc2 = glGetUniformLocation(shader->program, "counter");
+	glUniform1f(loc2, counter);
+
+	GLint loc3 = glGetUniformLocation(shader->program, "wibble");
+	glUniform1f(loc3, 1.0f);
 	
-	
-	//transform.SetPos(glm::vec3(0, -0.5, 1));
+	cubeTransform.SetPos(glm::vec3(0, 0, 1));
+	cubeTransform.SetRot(glm::vec3(0.5, counter / 4, 180));
 	//transform.SetScale(glm::vec3(1,1,1));
 
+
 	shader->Bind();
-	shader->Update(transform);
-	texture->Bind(0);
-	mesh->Draw();
-	counter = counter + 0.01;
+	shader->Update(cubeTransform, *_camera);
+	cubeTexture->Bind(0);
+	cube->Draw();
+
+
+
+	counter = counter + 0.01f;
+
+
 
 	// old code for testing only 
 	glEnableClientState(GL_COLOR_ARRAY); 

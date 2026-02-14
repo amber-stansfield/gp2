@@ -11,7 +11,7 @@ public:
 	Shader(const std::string& filename);
 
 	void Bind(); //Set gpu to use our shaders
-	void Update(const Transform& transform);
+	void Update(const Transform& transform, const Camera& camera);
 
 	std::string Shader::LoadShader(const std::string& fileName);
 
@@ -20,8 +20,8 @@ public:
 	GLuint Shader::CreateShader(const std::string& text, unsigned int type);
 
 
-	Camera* _camera;
 
+	GLuint program; // Track the shader program GLuint shaders[NUM_SHADERS];
 	~Shader();
 
 
@@ -37,7 +37,8 @@ private:
 		NUM_UNIFORMS
 
 	};
-	GLuint program; // Track the shader program GLuint shaders[NUM_SHADERS];
+
+	
 	GLuint shaders[NUM_SHADERS];//array of shaders
 	GLuint uniforms[NUM_UNIFORMS]; //no of uniform variables
 
