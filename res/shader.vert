@@ -6,6 +6,9 @@ attribute vec2 texCoord;
 varying float wibble0;
 uniform float wibble;
 
+varying float UVScale0;
+uniform float UVScale;
+
 varying vec2 texCoord0;
 varying float Counter;
 
@@ -25,7 +28,9 @@ else
 {
 gl_Position = transform * vec4(position, 1.0);
 }
+UVScale0 = UVScale;
 wibble0 = wibble;
 texCoord0 = texCoord;
 Counter = counter;
+
 }

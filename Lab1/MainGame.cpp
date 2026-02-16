@@ -62,15 +62,77 @@ Vertex cubeVertices[] = {
 						Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(0,0))
 };
 
+Vertex skyBoxVertices[] = {
+
+	//  front face
+
+	Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(1,1)),
+
+
+	Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(1,1)),
+
+	// back face
+	Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(1,1)),
+	Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(0,0)),
+
+
+	Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(1,1)),
+
+	// top face
+	Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(1,1)),
+	Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(0,1)),
+
+	Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,0)),
+
+	// bottom face
+	Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
+	Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+
+	Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(1,1)),
+
+	// left face
+
+	Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(1,1)),
+
+
+	Vertex(glm::vec3(-0.5,  0.5, -0.5), glm::vec2(1,1)),
+	Vertex(glm::vec3(-0.5, -0.5,  0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(-0.5,  0.5,  0.5), glm::vec2(0,1)),
+
+	// right face
+
+	Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,1)),
+	Vertex(glm::vec3(0.5, -0.5,  0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(0,0)),
+
+	Vertex(glm::vec3(0.5, -0.5, -0.5), glm::vec2(0,0)),
+	Vertex(glm::vec3(0.5,  0.5, -0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(0.5,  0.5,  0.5), glm::vec2(1,1))
+};
 Vertex floorVertices[] = {
 
 	// top face
-	Vertex(glm::vec3(0.5,  0.0, -0.5), glm::vec2(1,1)),
 	Vertex(glm::vec3(-0.5,  0.0, -0.5), glm::vec2(0,1)),
+	Vertex(glm::vec3(0.5,  0.0, -0.5), glm::vec2(1,1)),
 	Vertex(glm::vec3(0.5,  0.0,  0.5), glm::vec2(1,0)),
 
-	Vertex(glm::vec3(-0.5,  0.0,  0.5), glm::vec2(0,0)),
 	Vertex(glm::vec3(0.5,  0.0,  0.5), glm::vec2(1,0)),
+	Vertex(glm::vec3(-0.5,  0.0,  0.5), glm::vec2(0,0)),
 	Vertex(glm::vec3(-0.5,  0.0, -0.5), glm::vec2(0,1)),
 };
 
@@ -96,15 +158,30 @@ void MainGame::initSystems()
 {
 	_gameDisplay.initDisplay(); 
 
-	_camera = new Camera(glm::vec3(0, 0, -5), 5, 1.777778f, 0.1f, 100);
+	_camera = new Camera(glm::vec3(0, 0, -5), 5, 1.777778f, 0.1f, 10000);
 
 	SDL_SetRelativeMouseMode(SDL_TRUE);
-	cube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0])); //size calcuated by number of bytes of an array / no bytes of one element
+
 	shader = new Shader("..\\res\\shader"); //new shader
+
+	cube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0])); //size calcuated by number of bytes of an array / no bytes of one element
 	cubeTexture = new Texture("..\\res\\pikman.jpg");
+
+	redCube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
+	redCubeTexture = new Texture("..\\res\\redpikmin.png");
+
+	blueCube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
+	blueCubeTexture = new Texture("..\\res\\bluepikmin.png");
+
+	houseCube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
+	houseCubeTexture = new Texture("..\\res\\house.png");
+
 
 	floor = new Mesh(floorVertices, sizeof(floorVertices) / sizeof(floorVertices[0]));
 	floorTexture = new Texture("..\\res\\Bricks.jpg");
+
+	skyBox = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
+	skyBoxTexture = new Texture("..\\res\\sky.png");
 
 	cameraSens = _camera->camSens;
 	moveSpeed = _camera->moveSpeed;
@@ -169,12 +246,35 @@ void MainGame::processInput()
 
 void MainGame::drawGame()
 {
-	_gameDisplay.clearDisplay();
+	_gameDisplay.clearDisplay(0.13f, 0.6f, 0.71f, 0.0f);
 
+
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+
+
+	//sky
 	GLint loc1 = glGetUniformLocation(shader->program, "wibble");
 	glUniform1f(loc1, 0.0f);
 
-	floorTransform.SetRot(glm::vec3(-1.55, 0, 0));
+	GLint scaleLoc1 = glGetUniformLocation(shader->program, "UVScale");
+	glUniform1f(scaleLoc1, 0.05f);
+
+	skyBoxTransform.SetScale(glm::vec3(-300, -300, -300));
+	skyBoxTransform.SetRot(glm::vec3(glm::radians(180.0), 0, 0));
+	skyBoxTransform.SetPos(glm::vec3(1, -85, 1));
+	shader->Update(skyBoxTransform, *_camera);
+	skyBoxTexture->Bind(0);
+	skyBox->Draw();
+	
+
+
+	//floor
+
+	GLint scaleLoc2 = glGetUniformLocation(shader->program, "UVScale");
+	glUniform1f(scaleLoc2, 3.5f);
+
+	floorTransform.SetRot(glm::vec3(-glm::radians(90.0), 0, 0));
 	floorTransform.SetPos(glm::vec3(0, 3, 3));
 
 	floorTransform.SetScale(glm::vec3(100, 100, 1));
@@ -184,6 +284,24 @@ void MainGame::drawGame()
 	floorTexture->Bind(0);
 	floor->Draw();
 
+	//house
+
+	glCullFace(GL_FRONT);
+	GLint scaleLoc3 = glGetUniformLocation(shader->program, "UVScale");
+	glUniform1f(scaleLoc3, 0.07f);
+
+	houseCubeTransform.SetScale(glm::vec3(7, 4, 6));
+	houseCubeTransform.SetRot(glm::vec3(0, glm::radians(72.0), 0));
+	houseCubeTransform.SetPos(glm::vec3(-11, 0.3, 7));
+	shader->Update(houseCubeTransform, *_camera);
+	houseCubeTexture->Bind(0);
+	houseCube->Draw();
+
+
+
+	//cube1
+	GLint scaleLoc4 = glGetUniformLocation(shader->program, "UVScale");
+	glUniform1f(scaleLoc4, 1.0f);
 
 	GLint loc2 = glGetUniformLocation(shader->program, "counter");
 	glUniform1f(loc2, counter);
@@ -201,9 +319,27 @@ void MainGame::drawGame()
 	cubeTexture->Bind(0);
 	cube->Draw();
 
+	//cube2
+	redCubeTransform.SetPos(glm::vec3(1, 0, 1));
+	redCubeTransform.SetRot(glm::vec3(0.5, 180, counter / 4));
+
+	shader->Bind();
+	shader->Update(redCubeTransform, *_camera);
+	redCubeTexture->Bind(0);
+	redCube->Draw();
 
 
-	counter = counter + 0.01f;
+	//cube3
+	blueCubeTransform.SetPos(glm::vec3(-1, 0, 1));
+	blueCubeTransform.SetRot(glm::vec3(counter / 4, 0.5, 180));
+
+	shader->Bind();
+	shader->Update(blueCubeTransform, *_camera);
+	blueCubeTexture->Bind(0);
+	blueCube->Draw();
+
+	glCullFace(GL_BACK);
+	counter = counter + 1.0f * (frameTime * 0.001);
 
 
 

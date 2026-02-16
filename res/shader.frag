@@ -6,6 +6,8 @@ uniform sampler2D diffuse;
 
 varying float wibble0;
 
+varying float UVScale0;
+
 varying float Counter;
 
 void main()
@@ -13,11 +15,11 @@ void main()
 {
 if (wibble0 > 0.5f)
 {
-	gl_FragColor = texture2D(diffuse, texCoord0 + (cos(Counter) / 4));
+	gl_FragColor = texture2D(diffuse, texCoord0 + (cos(Counter) / 4) * UVScale0);
 }
 else
 {
-	gl_FragColor = texture2D(diffuse, texCoord0 * 12);
+	gl_FragColor = texture2D(diffuse, texCoord0 * 12 * UVScale0);
 }
 
 

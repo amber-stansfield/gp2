@@ -11,9 +11,9 @@ Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 
 	for (int i = 0; i < numVertices; i++) {
 		
-		positions.push_back(vertices[i].pos); //store our array of vertex positon into a list vec3 positions
+		positions.push_back(*vertices[i].GetPos()); //store our array of vertex positon into a list vec3 positions
 
-		texCoords.push_back(vertices[i].texCoord);
+		texCoords.push_back(*vertices[i].GetTexCoord());
 
 	}
 

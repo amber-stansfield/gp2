@@ -18,8 +18,7 @@ Shader::Shader(const std::string& filename)
 	glBindAttribLocation(program, 1, "texCoord");
 
 	glLinkProgram(program); //create executables that will run on the GPU shaders
-	glEnable(GL_CULL_FACE);
-	glCullFace(GL_BACK);
+
 
 	uniforms[TRANSFORM_U] = glGetUniformLocation(program, "transform");
 	CheckShaderError(program, GL_LINK_STATUS, true, "Error: Shader program linking failed"); // check for error

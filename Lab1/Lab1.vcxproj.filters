@@ -36,6 +36,9 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="obj_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -62,6 +65,9 @@
     <ClInclude Include="camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="obj_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\res\shader.frag">
@@ -79,6 +85,18 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\res\pikman.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\sky.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\redpikmin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\bluepikmin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\house.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

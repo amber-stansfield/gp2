@@ -37,7 +37,10 @@ public:
 		glm::vec3 right = glm::normalize(glm::cross(up, forward));
 
 		forward = glm::vec3(glm::normalize(glm::rotate(angle, right) * glm::vec4(forward, 0.0)));
+		if (forward.y > 0.75) { forward.y = 0.75; }
+		if (forward.y < -0.75) { forward.y = -0.75; }
 		up = glm::normalize(glm::cross(forward, right));
+		
 	}
 
 	void RotateY(float angle)
@@ -48,6 +51,7 @@ public:
 
 		forward = glm::vec3(glm::normalize(rotation * glm::vec4(forward, 0.0)));
 		up = glm::vec3(glm::normalize(rotation * glm::vec4(up, 0.0)));
+
 	}
 
 	float camSens = 3;

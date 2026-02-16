@@ -4,8 +4,8 @@
 Display::Display()
 {
 	sdlWindow = nullptr; //initialise to generate null access violation for debugging. 
-	screenWidth = 1920;
-	screenHeight = 1080; 
+	screenWidth = 1920.0f;
+	screenHeight = 1080.0f; 
 }
 
 Display::~Display()
@@ -29,9 +29,9 @@ void Display::swapBuffer()
 	SDL_GL_SwapWindow(sdlWindow); //swap buffers
 }
 
-void Display::clearDisplay()
+void Display::clearDisplay(float r, float g, float b, float a)
 {
-	glClearDepth(1.0);
+	glClearColor(r,g,b,a);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear colour and depth buffer - set colour to colour defined in glClearColor
 }
 
@@ -44,7 +44,14 @@ void Display::initDisplay()
 	SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1); // set up double buffer   
 
-	sdlWindow = SDL_CreateWindow("Game Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenWidth, screenHeight, SDL_WINDOW_OPENGL); // create window
+	sdlWindow = SDL_CreateWindow("Game Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, (int)screenWidth, (int)screenHeight, SDL_WINDOW_OPENGL); // create window
+
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_MULTISAMPLE);
+	glEnable(GL_LINE_SMOOTH);
+	glEnable(GL_POINT_SMOOTH);
+	//glEnable(GL_CULL_FACE);
+	//glCullFace(GL_BACK);
 
 	if (sdlWindow == nullptr)
 	{

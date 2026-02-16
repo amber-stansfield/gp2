@@ -13,8 +13,10 @@ public:
 	~Display();
 	void initDisplay();
 	void swapBuffer();
-	void clearDisplay();
+	void clearDisplay(float,float,float,float);
 
+	int getScreenHeight() { return screenHeight; }
+	int getScreenWidth() { return screenWidth; }
 
 	SDL_Window* sdlWindow; //holds pointer to out windows
 
