@@ -39,6 +39,12 @@
     <ClCompile Include="obj_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -68,12 +74,24 @@
     <ClInclude Include="obj_loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\res\shader.frag">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\res\shader.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\screwer.exr">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -97,6 +115,15 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\res\house.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\black.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\screwer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\res\screwerUV.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

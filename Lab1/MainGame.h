@@ -8,7 +8,10 @@
 #include "chrono"
 #include "iostream"
 #include "windows.h"
+#include "Object.h"
 #include <SDL/SDL_syswm.h>
+#include "scene.h"
+#include "ResourceManager.h"
 #include <GL/gl.h>
 
 
@@ -21,9 +24,10 @@ public:
 	~MainGame();
 
 
-	Camera* _camera;
+	Camera _camera;
 
 	void run();
+
 
 
 protected:
@@ -34,6 +38,7 @@ private:
 	void processInput();
 	void gameLoop();
 	void drawGame();
+	void PhysicsUpdate();
 
 	float counter = 0;
 
@@ -41,21 +46,28 @@ private:
 
 	long long frameTime;
 
+	Scene scene1;
+
 	std::chrono::high_resolution_clock _clock;
 	
 	float cameraSens;
 	float moveSpeed;
 	
-	Shader* shader;
+	Shader shader;
 
-	Mesh* floor;
-	Shader* floorShader;
-	Texture* floorTexture;
-	Transform floorTransform;
+	Object* screwRiver;
+
+	Object* skyBox;
+
+	Object* floor;
+
+	Object* wibbleCube;
+
+	Object* duglet;
 
 	Mesh* cube;
 	Texture* cubeTexture;
-	Transform cubeTransform;
+	Transform* cubeTransform;
 
 	Mesh* redCube;
 	Texture* redCubeTexture;
@@ -70,9 +82,9 @@ private:
 	Transform blueCubeTransform;
 
 
-	Mesh* skyBox;
-	Texture* skyBoxTexture;
-	Transform skyBoxTransform;
+	//Mesh* skyBox;
+	//Texture* skyBoxTexture;
+	//Transform skyBoxTransform;
 
 
 	Display _gameDisplay;

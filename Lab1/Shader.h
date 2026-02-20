@@ -8,7 +8,9 @@ class Shader
 {
 public:
 
-	Shader(const std::string& filename);
+	Shader();
+
+	void init(const std::string& filename);
 
 	void Bind(); //Set gpu to use our shaders
 	void Update(const Transform& transform, const Camera& camera);

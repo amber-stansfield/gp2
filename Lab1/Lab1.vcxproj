@@ -75,6 +75,8 @@
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="obj_loader.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="stb_image.c" />
     <ClCompile Include="Texture.cpp" />
@@ -84,23 +86,30 @@
     <ClInclude Include="Display.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="obj_loader.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\res\screwer.exr" />
     <None Include="..\res\shader.frag" />
     <None Include="..\res\shader.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\GP2-Lab3 Starter\GP2-Lab3 Starter\res\bricks.jpg" />
     <Image Include="..\..\..\GP2-Lab3 Starter\GP2-Lab3 Starter\res\Water.jpg" />
+    <Image Include="..\res\black.png" />
     <Image Include="..\res\bluepikmin.png" />
     <Image Include="..\res\house.png" />
     <Image Include="..\res\pikman.jpg" />
     <Image Include="..\res\redpikmin.png" />
+    <Image Include="..\res\screwer.png" />
+    <Image Include="..\res\screwerUV.png" />
     <Image Include="..\res\sky.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

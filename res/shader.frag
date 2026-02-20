@@ -15,11 +15,11 @@ void main()
 {
 if (wibble0 > 0.5f)
 {
-	gl_FragColor = texture2D(diffuse, texCoord0 + (cos(Counter) / 4) * UVScale0);
+	gl_FragColor = texture2D(diffuse, vec2(texCoord0.x, texCoord0.y *-1) * UVScale0);
 }
 else
 {
-	gl_FragColor = texture2D(diffuse, texCoord0 * 12 * UVScale0);
+	gl_FragColor = texture2D(diffuse, vec2(texCoord0.x, texCoord0.y *-1) * UVScale0);
 }
 
 

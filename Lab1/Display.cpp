@@ -39,6 +39,8 @@ void Display::initDisplay()
 {
 	SDL_Init(SDL_INIT_EVERYTHING); //initalise everything
 
+
+	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 	SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8); //Min no of bits used to diplay colour
 	SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
@@ -46,12 +48,6 @@ void Display::initDisplay()
 
 	sdlWindow = SDL_CreateWindow("Game Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, (int)screenWidth, (int)screenHeight, SDL_WINDOW_OPENGL); // create window
 
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_MULTISAMPLE);
-	glEnable(GL_LINE_SMOOTH);
-	glEnable(GL_POINT_SMOOTH);
-	//glEnable(GL_CULL_FACE);
-	//glCullFace(GL_BACK);
 
 	if (sdlWindow == nullptr)
 	{
@@ -59,6 +55,15 @@ void Display::initDisplay()
 	}
 
 	glContext = SDL_GL_CreateContext(sdlWindow);
+
+
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LESS);
+	glEnable(GL_MULTISAMPLE);
+	glEnable(GL_LINE_SMOOTH);
+	glEnable(GL_POINT_SMOOTH);
 
 	if (glContext == nullptr)
 	{

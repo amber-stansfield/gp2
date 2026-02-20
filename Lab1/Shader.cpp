@@ -2,7 +2,9 @@
 #include <iostream>
 #include <fstream>
 
-Shader::Shader(const std::string& filename)
+Shader::Shader() {}
+
+void Shader::init(const std::string& filename)
 {
 
 	program = glCreateProgram(); // create shader program (openGL saves as ref number)
