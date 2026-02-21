@@ -22,6 +22,14 @@ public:
 	GLuint Shader::CreateShader(const std::string& text, unsigned int type);
 
 
+	void setMat4(const std::string& name, const glm::mat4& matrix);
+
+	void Shader::setVec3(const std::string& name, const glm::vec3& vec3);
+
+	void Shader::setFloat(const std::string& name, const float Float);
+	
+
+	void Shader::setInt(const std::string& name, const int Int);
 
 	GLuint program; // Track the shader program GLuint shaders[NUM_SHADERS];
 	~Shader();

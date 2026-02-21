@@ -1,15 +1,15 @@
 #include "Shader.h"
 #include <iostream>
 #include <fstream>
-
+#include <glm/gtc/type_ptr.hpp>
 Shader::Shader() {}
 
 void Shader::init(const std::string& filename)
 {
 
 	program = glCreateProgram(); // create shader program (openGL saves as ref number)
-	shaders[0] = CreateShader(LoadShader("..\\res\\shader.vert"), GL_VERTEX_SHADER); // create vertex shader
-	shaders[1] = CreateShader(LoadShader("..\\res\\shader.frag"), GL_FRAGMENT_SHADER); // create fragment shader
+	shaders[0] = CreateShader(LoadShader(filename+".vert"), GL_VERTEX_SHADER); // create vertex shader
+	shaders[1] = CreateShader(LoadShader(filename+".frag"), GL_FRAGMENT_SHADER); // create fragment shader
 
 	for (unsigned int i = 0; i < NUM_SHADERS; i++)
 	{
@@ -18,6 +18,7 @@ void Shader::init(const std::string& filename)
 
 	glBindAttribLocation(program, 0, "position");
 	glBindAttribLocation(program, 1, "texCoord");
+	glBindAttribLocation(program, 2, "normal");
 
 	glLinkProgram(program); //create executables that will run on the GPU shaders
 
@@ -34,6 +35,31 @@ void Shader::Update(const Transform& transform, const Camera& camera)
 	glm::mat4 model = transform.GetMVP(camera);
 	glUniformMatrix4fv(uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
 
+}
+
+
+void Shader::setVec3(const std::string& name, const glm::vec3& v)
+{
+	GLint loc = glGetUniformLocation(program, name.c_str());
+	glUniform3f(loc, v.x, v.y, v.z);
+}
+
+void Shader::setFloat(const std::string& name, const float Float)
+{
+	GLint loc = glGetUniformLocation(program, name.c_str());
+	glUniform1f(loc, Float);
+}
+void Shader::setMat4(const std::string& name, const glm::mat4& matrix)
+{
+	GLint loc = glGetUniformLocation(program, name.c_str());
+	glUniformMatrix4fv(loc, 1, GL_FALSE, glm::value_ptr(matrix));
+}
+
+void Shader::setInt(const std::string& name, const int Int)
+{
+
+	GLint loc = glGetUniformLocation(program, name.c_str());
+	glUniform1i(loc,Int);
 }
 
 

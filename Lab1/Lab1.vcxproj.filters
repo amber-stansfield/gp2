@@ -45,6 +45,12 @@
     <ClCompile Include="Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ShadowMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -92,6 +98,12 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\res\screwer.exr">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shadow.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shadow.vert">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

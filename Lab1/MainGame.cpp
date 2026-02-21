@@ -31,10 +31,16 @@ void MainGame::initSystems()
 {
 
 	/*skyBoxTexture = new Texture;*/
-	SDL_SetRelativeMouseMode(SDL_TRUE);
+
 
 	_gameDisplay.initDisplay(); 
 
+	SDL_SetRelativeMouseMode(SDL_TRUE);
+
+	light1 = Light({ 0, 10, 5 }, { 1, 1, 1 });
+	light1.shadow.init(2048, 2048);
+
+	shadowShader.init("..\\res\\shadow");
 	//scene1 = Scene();
 
 	skyBox = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
@@ -57,7 +63,8 @@ void MainGame::initSystems()
 	wibbleCube = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
 		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
 
-	wibbleCube->getTransform()->SetPos(glm::vec3(1, 1, -2));
+	
+		wibbleCube->getTransform()->SetPos(glm::vec3(1, 1, -2));
 
 	duglet = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\duglet.obj"),
 		ResourceManager::LoadTexture("..\\res\\diglit.png"));
@@ -66,6 +73,14 @@ void MainGame::initSystems()
 
 	duglet->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), 0, 0));
 
+
+	light = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
+		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
+
+	light->getTransform()->SetScale(glm::vec3(-1, -1, -1));
+
+
+	//light->getTransform()->SetPos(glm::vec3(0.0f, 5.0f, 3.5f));
 
 	//ScrewRiver->getMesh()->loadModel("..\\res\\screwer.obj");
 
@@ -78,6 +93,9 @@ void MainGame::initSystems()
 	//skyBoxTexture->init("..\\res\\sky.png");
 
 	shader.init("..\\res\\shader"); //new shader
+
+
+	//glUniform3f(glGetUniformLocation(shader.program, "lightPos"), light->getTransform()->GetPos()->x, light->getTransform()->GetPos()->y, light->getTransform()->GetPos()->z);
 
 	_camera = Camera(glm::vec3(0, 0, -5), 5, 1.777778f, 0.1f, 10000);
 
@@ -153,8 +171,8 @@ void MainGame::processInput()
 		switch (evnt.type)
 		{
 		case SDL_MOUSEMOTION:
-			_camera.RotateY(evnt.motion.xrel * (frameTime * 0.001f) * cameraSens);
-			_camera.Pitch(-evnt.motion.yrel * (frameTime * 0.001f) * cameraSens);
+			_camera.RotateY(evnt.motion.xrel * cameraSens);
+			_camera.Pitch(-evnt.motion.yrel * cameraSens);
 			break;
 		}
 	}
@@ -168,19 +186,86 @@ void MainGame::PhysicsUpdate()
 	screwRiver->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), glm::radians(180.0f) * sin(counter), glm::radians(90.0f) * sin(counter)));
 	screwRiver->getTransform()->SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
 
+	light->getTransform()->SetPos(glm::vec3(6* cos(counter), -abs(4 * sin(counter)), 5 * sin(counter)));
 
-	floor->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), 0, 0));
+	light1.position = *light->getTransform()->GetPos();
+
+
+
 	
 }
 
 void MainGame::drawGame()
 {
-
+	Sleep(5.0f);
 	_gameDisplay.clearDisplay(0.13f, 0.6f, 0.71f, 0.0f);
 
 	//glEnable(GL_CULL_FACE);
 	//glCullFace(GL_BACK);
+
+	glm::vec3 lightPos = light1.position;
+	float nearPlane = 1.0f;
+	float farPlane  = 50.0f;
+
+	glm::mat4 shadowProj = glm::perspective(glm::radians(90.0f), 1.0f, nearPlane, farPlane);
+
+	std::vector<glm::mat4> shadowTransforms;
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 1, 0, 0), glm::vec3(0,-1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(-1, 0, 0), glm::vec3(0,-1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0, 1, 0), glm::vec3(0, 0, 1)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0,-1, 0), glm::vec3(0, 0,-1)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0, 0, 1), glm::vec3(0,-1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0, 0,-1), glm::vec3(0,-1, 0)));
+
+	glEnable(GL_DEPTH_TEST);
+
+	light1.shadow.bindForWriting();
+	for (int face = 0; face < 6; face++)
+	{
+
+		glFramebufferTexture2D(
+			GL_FRAMEBUFFER,
+			GL_DEPTH_ATTACHMENT,
+			GL_TEXTURE_CUBE_MAP_POSITIVE_X + face,
+			light1.shadow.depthCube,
+			0
+		);
+
+		glClear(GL_DEPTH_BUFFER_BIT);
+
+		shadowShader.Bind();
+		shadowShader.setMat4("shadowMatrices[0]", shadowTransforms[face]);
+		shadowShader.setVec3("lightPos", lightPos);
+		shadowShader.setFloat("farPlane", farPlane);
+
+		for (auto& obj : scene1.objects)
+		{
+			shadowShader.setMat4("model", obj->getTransform()->GetModel());
+			obj->getMesh()->draw();
+		}
+	}
+
+
+	light1.shadow.unbind();
+	glViewport(0, 0, _gameDisplay.getScreenWidth(), _gameDisplay.getScreenHeight());
+
+
+
+
 	shader.Bind();
+
+	glUniform3f(glGetUniformLocation(shader.program, "lightPos0"), light1.position.x, light1.position.y, light1.position.z);
+	glUniform3f(glGetUniformLocation(shader.program, "viewPos0"), _camera.getPos().x, _camera.getPos().y, _camera.getPos().z);
+	glUniform1f(glGetUniformLocation(shader.program, "farPlane"), farPlane);
+
+
+
+
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_CUBE_MAP, light1.shadow.depthCube);
+	shader.setInt("shadowCube", 1);
+	shader.setFloat("farPlane", farPlane);
+
 
 
 	//glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 1.0f);
@@ -189,18 +274,19 @@ void MainGame::drawGame()
 
 	glUniform1f(glGetUniformLocation(shader.program, "counter"), counter);
 
-	
+	glUniform3f(glGetUniformLocation(shader.program, "lightColour0"), 0.7f, 0.3f, 0.4f);
+
 
 
 	for (auto& obj : scene1.objects) {
 
 		if (obj->getID() == floor->getID()) {
-			glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 10.0f);
+			glUniform1f(glGetUniformLocation(shader.program, "UVScale0"), 10.0f);
 
 		}
 		else {
 
-			glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 1.0f);
+			glUniform1f(glGetUniformLocation(shader.program, "UVScale0"), 1.0f);
 		}
 		if (obj->getID() == wibbleCube->getID()) {
 			glUniform1f(glGetUniformLocation(shader.program, "wibble"), 1);
@@ -209,6 +295,9 @@ void MainGame::drawGame()
 
 			glUniform1f(glGetUniformLocation(shader.program, "wibble"), 0.0f);
 		}
+
+		shader.setMat4("model", obj->getTransform()->GetModel());
+		//glUniformMatrix4fv(glGetUniformLocation(shader.program, "model"),1,GL_FALSE, glm::value_ptr(obj->getTransform()->GetModel()));
 		shader.Update(*obj->getTransform(), _camera);
 		obj->getTexture()->Bind(0);
 		obj->getMesh()->draw();
@@ -216,59 +305,6 @@ void MainGame::drawGame()
 
 
 
-	////house
-
-	//glCullFace(GL_FRONT);
-	//GLint scaleLoc3 = glGetUniformLocation(shader->program, "UVScale");
-	//glUniform1f(scaleLoc3, 0.07f);
-
-	//houseCubeTransform.SetScale(glm::vec3(7, 4, 6));
-	//houseCubeTransform.SetRot(glm::vec3(0, glm::radians(72.0), 0));
-	//houseCubeTransform.SetPos(glm::vec3(-11, 0.3, 7));
-	//shader->Update(houseCubeTransform, _camera);
-	//houseCubeTexture->Bind(0);
-	//houseCube->Draw();
-
-
-
-	////cube1
-	//GLint scaleLoc4 = glGetUniformLocation(shader->program, "UVScale");
-	//glUniform1f(scaleLoc4, 1.0f);
-
-
-	//GLint loc3 = glGetUniformLocation(shader->program, "wibble");
-	//glUniform1f(loc3, 1.0f);
-	//
-	//cubeTransform.SetPos(glm::vec3(0, 0, 1));
-	//cubeTransform.SetRot(glm::vec3(0.5, counter / 4, 180));
-	////transform.SetScale(glm::vec3(1,1,1));
-
-
-	//shader->Bind();
-	//shader->Update(cubeTransform, _camera);
-	//cubeTexture->Bind(0);
-	//cube->Draw();
-
-	////cube2
-	//redCubeTransform.SetPos(glm::vec3(1, 0, 1));
-	//redCubeTransform.SetRot(glm::vec3(0.5, 180, counter / 4));
-
-	//shader->Bind();
-	//shader->Update(redCubeTransform, _camera);
-	//redCubeTexture->Bind(0);
-	//redCube->Draw();
-
-
-	////cube3
-	//blueCubeTransform.SetPos(glm::vec3(-1, 0, 1));
-	//blueCubeTransform.SetRot(glm::vec3(counter / 4, 0.5, 180));
-
-	//shader->Bind();
-	//shader->Update(blueCubeTransform, _camera);
-	//blueCubeTexture->Bind(0);
-	//blueCube->Draw();
-
-	//glCullFace(GL_BACK);
 	counter = counter + 1.0f * (frameTime * 0.001);
 
 

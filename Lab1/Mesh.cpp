@@ -5,6 +5,7 @@ std::vector<glm::vec3> positions;
 
 std::vector<glm::vec2> texCoords;
 
+
 #pragma region oldMeshMethod
 //Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 //{

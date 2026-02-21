@@ -13,7 +13,8 @@
 #include "scene.h"
 #include "ResourceManager.h"
 #include <GL/gl.h>
-
+#include <glm/gtc/type_ptr.hpp>
+#include "light.cpp"
 
 enum class GameState{PLAY, EXIT};
 
@@ -55,6 +56,8 @@ private:
 	
 	Shader shader;
 
+	Shader shadowShader;
+	
 	Object* screwRiver;
 
 	Object* skyBox;
@@ -64,6 +67,10 @@ private:
 	Object* wibbleCube;
 
 	Object* duglet;
+
+	Object* light;
+
+	Light light1;
 
 	Mesh* cube;
 	Texture* cubeTexture;

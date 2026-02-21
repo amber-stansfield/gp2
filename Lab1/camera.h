@@ -10,6 +10,12 @@ public:
 
 	Camera() {};
 
+
+	glm::vec3 getPos() {
+		return pos;
+	}
+
+
 	Camera(const glm::vec3& pos, float fov, float aspect, float zNear, float zFar)
 	{
 		this->pos = pos;
@@ -57,7 +63,7 @@ public:
 
 	}
 
-	float camSens = 3;
+	float camSens = 0.0025;
 	float moveSpeed = 20;
 
 protected:
