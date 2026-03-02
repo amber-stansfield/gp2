@@ -40,6 +40,7 @@ private:
 	void gameLoop();
 	void drawGame();
 	void PhysicsUpdate();
+	void instanceModels();
 
 	float counter = 0;
 
@@ -72,21 +73,21 @@ private:
 
 	Light light1;
 
-	Mesh* cube;
-	Texture* cubeTexture;
-	Transform* cubeTransform;
+	//Mesh* cube;
+	//Texture* cubeTexture;
+	//Transform* cubeTransform;
 
-	Mesh* redCube;
-	Texture* redCubeTexture;
-	Transform redCubeTransform;
+	//Mesh* redCube;
+	//Texture* redCubeTexture;
+	//Transform redCubeTransform;
 
-	Mesh* houseCube;
-	Texture* houseCubeTexture;
-	Transform houseCubeTransform;
+	//Mesh* houseCube;
+	//Texture* houseCubeTexture;
+	//Transform houseCubeTransform;
 
-	Mesh* blueCube;
-	Texture* blueCubeTexture;
-	Transform blueCubeTransform;
+	//Mesh* blueCube;
+	//Texture* blueCubeTexture;
+	//Transform blueCubeTransform;
 
 
 	//Mesh* skyBox;

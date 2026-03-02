@@ -106,6 +106,12 @@
     <None Include="shadow.vert">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\res\shadow.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\shadow.frag">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\GP2-Lab3 Starter\GP2-Lab3 Starter\res\Water.jpg">

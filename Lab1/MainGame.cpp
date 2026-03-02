@@ -30,8 +30,6 @@ void MainGame::run()
 void MainGame::initSystems()
 {
 
-	/*skyBoxTexture = new Texture;*/
-
 
 	_gameDisplay.initDisplay(); 
 
@@ -43,80 +41,14 @@ void MainGame::initSystems()
 	shadowShader.init("..\\res\\shadow");
 	//scene1 = Scene();
 
-	skyBox = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
-		ResourceManager::LoadTexture("..\\res\\sky.png"));
+	instanceModels();
 
-	skyBox->getTransform()->SetScale(glm::vec3(-100, -70, -100));
-	//skyBox->getTransform()->SetRot(glm::vec3(0, 0, 0));
-
-	floor = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\plane.obj"),
-		ResourceManager::LoadTexture("..\\res\\bricks.jpg"));
-	
-	floor->getTransform()->SetPos(glm::vec3(0, 2, 0));
-	floor->getTransform()->SetScale(glm::vec3(20, 1, 20));
-	floor->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), 0, 0));
-
-
-	screwRiver = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\screwer.obj"),
-		ResourceManager::LoadTexture("..\\res\\screwer.png"));
-
-	wibbleCube = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
-		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
-
-	
-		wibbleCube->getTransform()->SetPos(glm::vec3(1, 1, -2));
-
-	duglet = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\duglet.obj"),
-		ResourceManager::LoadTexture("..\\res\\diglit.png"));
-
-	duglet->getTransform()->SetPos(glm::vec3(0, 2.2f, 0));
-
-	duglet->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), 0, 0));
-
-
-	light = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
-		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
-
-	light->getTransform()->SetScale(glm::vec3(-1, -1, -1));
-
-
-	//light->getTransform()->SetPos(glm::vec3(0.0f, 5.0f, 3.5f));
-
-	//ScrewRiver->getMesh()->loadModel("..\\res\\screwer.obj");
-
-	//ScrewRiver->getTexture()->init("..\\res\\screwer.png");
-
-	//cubeTexture->init("..\\res\\screwer.png");
-
-	//skyBox->loadModel("..\\res\\screwer.obj");
-
-	//skyBoxTexture->init("..\\res\\sky.png");
 
 	shader.init("..\\res\\shader"); //new shader
 
 
-	//glUniform3f(glGetUniformLocation(shader.program, "lightPos"), light->getTransform()->GetPos()->x, light->getTransform()->GetPos()->y, light->getTransform()->GetPos()->z);
 
 	_camera = Camera(glm::vec3(0, 0, -5), 5, 1.777778f, 0.1f, 10000);
-
-
-
-
-	//redCube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
-	//redCubeTexture = new Texture("..\\res\\redpikmin.png");
-
-	//blueCube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
-	//blueCubeTexture = new Texture("..\\res\\bluepikmin.png");
-
-	//houseCube = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
-	//houseCubeTexture = new Texture("..\\res\\house.png");
-
-
-	//floor = new Mesh(floorVertices, sizeof(floorVertices) / sizeof(floorVertices[0]));
-	//floorTexture = new Texture("..\\res\\Bricks.jpg");
-
-	//skyBox = new Mesh(cubeVertices, sizeof(cubeVertices) / sizeof(cubeVertices[0]));
-	//skyBoxTexture = new Texture("..\\res\\sky.png");
 
 	cameraSens = _camera.camSens;
 	moveSpeed = _camera.moveSpeed;
@@ -281,12 +213,12 @@ void MainGame::drawGame()
 	for (auto& obj : scene1.objects) {
 
 		if (obj->getID() == floor->getID()) {
-			glUniform1f(glGetUniformLocation(shader.program, "UVScale0"), 10.0f);
+			glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 10.0f);
 
 		}
 		else {
 
-			glUniform1f(glGetUniformLocation(shader.program, "UVScale0"), 1.0f);
+			glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 1.0f);
 		}
 		if (obj->getID() == wibbleCube->getID()) {
 			glUniform1f(glGetUniformLocation(shader.program, "wibble"), 1);
@@ -294,6 +226,14 @@ void MainGame::drawGame()
 		else {
 
 			glUniform1f(glGetUniformLocation(shader.program, "wibble"), 0.0f);
+		}
+		if (obj->getID() == light->getID())
+		{
+			glUniform1f(glGetUniformLocation(shader.program, "texMult"), 1000.0f);
+		}
+		else {
+
+			glUniform1f(glGetUniformLocation(shader.program, "texMult"), 1.0f);
 		}
 
 		shader.setMat4("model", obj->getTransform()->GetModel());
@@ -311,4 +251,36 @@ void MainGame::drawGame()
 
 
 	_gameDisplay.swapBuffer();
+}
+
+
+void MainGame::instanceModels()
+{
+	skyBox = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
+		ResourceManager::LoadTexture("..\\res\\sky.png"));
+	skyBox->getTransform()->SetScale(glm::vec3(-100, -70, -100));
+	//skyBox->getTransform()->SetRot(glm::vec3(0, 0, 0));
+
+	floor = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\plane.obj"),
+		ResourceManager::LoadTexture("..\\res\\bricks.jpg"));
+	floor->getTransform()->SetPos(glm::vec3(0, 2, 0));
+	floor->getTransform()->SetScale(glm::vec3(20, 1, 20));
+	floor->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), 0, 0));
+
+
+	screwRiver = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\screwer.obj"),
+		ResourceManager::LoadTexture("..\\res\\screwer.png"));
+
+	wibbleCube = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
+		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
+	wibbleCube->getTransform()->SetPos(glm::vec3(1, 1, -2));
+
+	duglet = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\duglet.obj"),
+		ResourceManager::LoadTexture("..\\res\\diglit.png"));
+	duglet->getTransform()->SetPos(glm::vec3(0, 2.2f, 0));
+	duglet->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), 0, 0));
+
+
+	light = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
+		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
 }

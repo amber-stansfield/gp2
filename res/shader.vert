@@ -1,27 +1,26 @@
-#version 140
+#version 330
 
 attribute vec3 position;
 attribute vec2 texCoord;
 attribute vec3 normal;
 
 
-varying vec3 position0;
 
-varying vec3 normal0;
+out data
+{
+ vec3 position;
+ vec3 normal;
+ float wibble;
+ vec3 fragPos;
+ vec2 texCoord;
+ float counter;
+ float UVScale;
+} vert;
 
-varying float wibble0;
-uniform float wibble;
 
-varying vec3 fragPos0;
-varying vec3 fragPos;
-
-
-varying vec2 texCoord0;
-varying float counter0;
-
+uniform float UVScale;
 uniform mat4 model;
-
-
+uniform float wibble;
 uniform float counter;
 uniform mat4 transform;
  
@@ -40,13 +39,13 @@ gl_Position = transform * vec4(position, 1.0);
 }
 
 mat3 normalMatrix = mat3(transpose(inverse(model)));
-normal0 = normalize(normalMatrix * normal);
+vert.normal = normalize(normalMatrix * normal);
 
-fragPos0 = vec3(model * vec4(position, 1.0f));
-position0 = position;
-
-wibble0 = wibble;
-texCoord0 = texCoord;
-counter0 = counter;
+vert.fragPos = vec3(model * vec4(position, 1.0f));
+vert.position = position;
+vert.wibble = wibble;
+vert.texCoord = texCoord;
+vert.counter = counter;
+vert.UVScale = UVScale;
 
 }
