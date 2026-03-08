@@ -118,6 +118,21 @@ void MainGame::PhysicsUpdate()
 	screwRiver->getTransform()->SetRot(glm::vec3(glm::radians(180.0f), glm::radians(180.0f) * sin(counter), glm::radians(90.0f) * sin(counter)));
 	screwRiver->getTransform()->SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
 
+	//lerp to follow camera
+	Camera::CameraBasis b = _camera.getBasis();
+	glm::vec3 worldOffset = b.right * gun->getTransform()->getLocalOffset().x +
+		b.up * gun->getTransform()->getLocalOffset().y +
+		b.forward * gun->getTransform()->getLocalOffset().z;
+
+
+	glm::vec3 targetPos = _camera.getPos() + worldOffset;
+
+	gun->getTransform()->SetPos(glm::vec3(*gun->getTransform()->GetPos() + (targetPos - *gun->getTransform()->GetPos()) * (75.0f * frameTime * 0.001f)));
+
+	glm::quat gunRot = gun->pointFromCam(_camera);
+
+	gun->getTransform()->SetQRot(gunRot);
+
 	light->getTransform()->SetPos(glm::vec3(6* cos(counter), -abs(4 * sin(counter)), 5 * sin(counter)));
 
 	light1.position = *light->getTransform()->GetPos();
@@ -274,6 +289,12 @@ void MainGame::instanceModels()
 	wibbleCube = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\cube.obj"),
 		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
 	wibbleCube->getTransform()->SetPos(glm::vec3(1, 1, -2));
+
+	gun = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\gun.obj"),
+		ResourceManager::LoadTexture("..\\res\\Water.jpg"));
+	gun->getTransform()->SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+	gun->getTransform()->SetRot(glm::vec3(0, glm::radians(-90.0f), glm::radians(180.0f)));
+	gun->getTransform()->setLocalOffset(glm::vec3(-0.6f, 0.6f, 0.6f));
 
 	duglet = &scene1.CreateObject(ResourceManager::LoadMesh("..\\res\\duglet.obj"),
 		ResourceManager::LoadTexture("..\\res\\diglit.png"));

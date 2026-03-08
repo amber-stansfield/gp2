@@ -1,2 +1,8 @@
 ﻿C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(548,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Labs.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Lab1.vcxproj -> C:\Users\aaron\Desktop\glooper\gp2\Debug\Lab1.exe
+  MainGame.cpp
+C:\Users\amber\Desktop\gamesProgramming\gp2\Lab1\camera.h(90,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'MainGame.cpp')
+  
+C:\Users\amber\Desktop\gamesProgramming\gp2\Lab1\MainGame.cpp(147,8): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+C:\Users\amber\Desktop\gamesProgramming\gp2\Lab1\MainGame.cpp(263,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Lab1.vcxproj -> C:\Users\amber\Desktop\gamesProgramming\gp2\Debug\Lab1.exe

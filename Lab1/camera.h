@@ -63,6 +63,30 @@ public:
 
 	}
 
+	struct CameraBasis
+	{
+		glm::vec3 forward;
+		glm::vec3 right;
+		glm::vec3 up;
+	};
+	CameraBasis getBasis() {
+		glm::vec3 forward = glm::normalize(this->forward);
+		glm::vec3 right = glm::normalize(glm::cross(forward, this->up));
+		glm::vec3 up = glm::normalize(glm::cross(right, forward));
+
+		return { forward, right, up };
+	}
+
+
+	glm::vec3 getForwardVec() {
+		return this->forward;
+	}
+
+	glm::vec3 getUpVec() {
+		return this->up;
+	}
+
+
 	float camSens = 0.0025;
 	float moveSpeed = 20;
 
@@ -74,6 +98,9 @@ private:
 	glm::vec3 pos;
 	glm::vec3 forward;
 	glm::vec3 up;
+
+
+
 };
 
 #endif

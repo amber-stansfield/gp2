@@ -15,6 +15,8 @@
 #include <GL/gl.h>
 #include <glm/gtc/type_ptr.hpp>
 #include "light.cpp"
+#include <cmath>
+
 
 enum class GameState{PLAY, EXIT};
 
@@ -71,7 +73,11 @@ private:
 
 	Object* light;
 
+	Object* gun;
+
 	Light light1;
+
+	
 
 	//Mesh* cube;
 	//Texture* cubeTexture;
