@@ -61,9 +61,9 @@ void MainGame::gameLoop()
 	{
 
 		auto begin = _clock.now();
-		
-		drawGame();
+
 		PhysicsUpdate();
+		drawGame();
 		processInput();
 		auto end = _clock.now();
 		frameTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
@@ -127,7 +127,8 @@ void MainGame::PhysicsUpdate()
 
 	glm::vec3 targetPos = _camera.getPos() + worldOffset;
 
-	gun->getTransform()->SetPos(glm::vec3(*gun->getTransform()->GetPos() + (targetPos - *gun->getTransform()->GetPos()) * (75.0f * frameTime * 0.001f)));
+	gun->getTransform()->SetPos(glm::vec3(*gun->getTransform()->GetPos() + (targetPos - *gun->getTransform()->GetPos()) * 0.85f));
+	//gun->getTransform()->SetPos(targetPos);
 
 	glm::quat gunRot = gun->pointFromCam(_camera);
 

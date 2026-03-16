@@ -12,8 +12,8 @@ in data
  float UVScale;
 } frag;
 
-float fog_maxdist = 18.0;
-float fog_mindist = 0.1f;
+float fog_maxdist = 100.0f;
+float fog_mindist = 3.0f;
 vec4  fog_colour = vec4(0.13f, 0.6f, 0.71f, 0.0f);
 
 uniform float texMult;
