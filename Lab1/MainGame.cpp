@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-unsigned int indices[] = { 0,1,2 };
+
 
 
 MainGame::MainGame()
@@ -36,7 +36,12 @@ void MainGame::initSystems()
 	SDL_SetRelativeMouseMode(SDL_TRUE);
 
 	light1 = Light({ 0, 10, 5 }, { 1, 1, 1 });
-	light1.shadow.init(2048, 2048);
+	//light1.shadow.init(4096, 4096);
+	cout << "res";
+	cout << _gameDisplay.getScreenWidth();
+	cout << _gameDisplay.getScreenHeight();
+	cout << "\n";
+	light1.shadow.init(_gameDisplay.getScreenWidth(), _gameDisplay.getScreenWidth());
 
 	shadowShader.init("..\\res\\shadow");
 	//scene1 = Scene();
@@ -152,8 +157,8 @@ void MainGame::drawGame()
 	//glCullFace(GL_BACK);
 
 	glm::vec3 lightPos = light1.position;
-	float nearPlane = 1.0f;
-	float farPlane  = 50.0f;
+	float nearPlane = 0.1f;
+	float farPlane  = 5000.0f;
 
 	glm::mat4 shadowProj = glm::perspective(glm::radians(90.0f), 1.0f, nearPlane, farPlane);
 
@@ -168,13 +173,13 @@ void MainGame::drawGame()
 	glEnable(GL_DEPTH_TEST);
 
 	light1.shadow.bindForWriting();
-	for (int face = 0; face < 6; face++)
+	for (int i = 0; i < 6; i++)
 	{
 
 		glFramebufferTexture2D(
 			GL_FRAMEBUFFER,
 			GL_DEPTH_ATTACHMENT,
-			GL_TEXTURE_CUBE_MAP_POSITIVE_X + face,
+			GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
 			light1.shadow.depthCube,
 			0
 		);
@@ -182,7 +187,7 @@ void MainGame::drawGame()
 		glClear(GL_DEPTH_BUFFER_BIT);
 
 		shadowShader.Bind();
-		shadowShader.setMat4("shadowMatrices[0]", shadowTransforms[face]);
+		shadowShader.setMat4("shadowMatrices[0]", shadowTransforms[i]);
 		shadowShader.setVec3("lightPos", lightPos);
 		shadowShader.setFloat("farPlane", farPlane);
 

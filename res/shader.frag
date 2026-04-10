@@ -42,6 +42,8 @@ float ShadowCalculation(vec3 fragPos)
     float closestDepth = texture(shadowCube, fragToLight).r;
     closestDepth *= farPlane;
 
+    vec3 pointdir = lightPos0 - frag.position;
+
     float bias = 0.05;
 
     float shadow = currentDist - bias > closestDepth ? 1.0 : 0.0;
@@ -110,11 +112,13 @@ float fogamount = fogFactor();
 if (frag.wibble > 0.5f)
 {
     //gl_FragColor = vec4(1-shadow);
+    
+    //gl_FragColor = vec4(gl_FragDepth);
 	gl_FragColor = vec4(mix(fog_colour.xyz, tex.rgb * result * texMult,fogamount), tex.a);
 }
 else
 {
-    //gl_FragColor = vec4(gl_FragDepth);
+    //gl_FragColor = vec4(1-shadow);
 	gl_FragColor = vec4(mix(fog_colour.xyz, tex.rgb * result * texMult,fogamount), tex.a);
 }
 

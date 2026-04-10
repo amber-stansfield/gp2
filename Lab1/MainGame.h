@@ -77,28 +77,6 @@ private:
 
 	Light light1;
 
-	
-
-	//Mesh* cube;
-	//Texture* cubeTexture;
-	//Transform* cubeTransform;
-
-	//Mesh* redCube;
-	//Texture* redCubeTexture;
-	//Transform redCubeTransform;
-
-	//Mesh* houseCube;
-	//Texture* houseCubeTexture;
-	//Transform houseCubeTransform;
-
-	//Mesh* blueCube;
-	//Texture* blueCubeTexture;
-	//Transform blueCubeTransform;
-
-
-	//Mesh* skyBox;
-	//Texture* skyBoxTexture;
-	//Transform skyBoxTransform;
 
 
 	Display _gameDisplay;

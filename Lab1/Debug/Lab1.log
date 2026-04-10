@@ -3,6 +3,6 @@
 C:\Users\aaron\Desktop\glooper\gp2\Lab1\camera.h(90,18): warning C4305: 'initializing': truncation from 'double' to 'float'
   (compiling source file 'MainGame.cpp')
   
-C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(148,8): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
-C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(264,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(153,8): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+C:\Users\aaron\Desktop\glooper\gp2\Lab1\MainGame.cpp(269,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Lab1.vcxproj -> C:\Users\aaron\Desktop\glooper\gp2\Debug\Lab1.exe

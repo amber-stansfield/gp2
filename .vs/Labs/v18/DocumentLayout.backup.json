@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:res\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:res\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -15,12 +19,20 @@
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:res\\shadow.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\ShadowMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\ShadowMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\MainGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Display.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shadow.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:res\\shadow.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\ShadowMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\ShadowMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D246FDDF-B30E-4F14-80F8-095FA4E04ECF}|Lab1\\Lab1.vcxproj|C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -102,44 +102,43 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "shadow.frag",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shadow.frag",
               "RelativeDocumentMoniker": "res\\shadow.frag",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shadow.frag",
               "RelativeToolTip": "res\\shadow.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-02T16:00:22.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T16:00:22.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "Shader.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.cpp",
               "RelativeDocumentMoniker": "Lab1\\Shader.cpp",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.cpp",
               "RelativeToolTip": "Lab1\\Shader.cpp",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-02-14T15:52:28.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "ShadowMap.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\ShadowMap.cpp",
               "RelativeDocumentMoniker": "Lab1\\ShadowMap.cpp",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\ShadowMap.cpp",
               "RelativeToolTip": "Lab1\\ShadowMap.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-02T15:20:47.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Shader.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Shader.h",
               "RelativeDocumentMoniker": "Lab1\\Shader.h",
@@ -151,16 +150,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "shader.vert",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shader.vert",
               "RelativeDocumentMoniker": "res\\shader.vert",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shader.vert",
               "RelativeToolTip": "res\\shader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAB8AAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-14T17:38:06.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-14T17:38:06.213Z"
             },
             {
               "$type": "Document",
@@ -170,39 +168,38 @@
               "RelativeDocumentMoniker": "res\\shader.frag",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shader.frag",
               "RelativeToolTip": "res\\shader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-02-14T15:47:18.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainGame.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.h",
               "RelativeDocumentMoniker": "Lab1\\MainGame.h",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.h",
               "RelativeToolTip": "Lab1\\MainGame.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-01-28T19:09:36.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainGame.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.cpp",
               "RelativeDocumentMoniker": "Lab1\\MainGame.cpp",
               "ToolTip": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\MainGame.cpp",
               "RelativeToolTip": "Lab1\\MainGame.cpp",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAgwIEAAAB7AAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-28T19:10:21.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T19:10:21.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "shadow.vert",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\res\\shadow.vert",
               "RelativeDocumentMoniker": "res\\shadow.vert",
@@ -226,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Object.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Object.h",
               "RelativeDocumentMoniker": "Lab1\\Object.h",
@@ -250,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Display.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Display.h",
               "RelativeDocumentMoniker": "Lab1\\Display.h",
@@ -262,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Display.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Display.cpp",
               "RelativeDocumentMoniker": "Lab1\\Display.cpp",
@@ -274,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Mesh.cpp",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Mesh.cpp",
               "RelativeDocumentMoniker": "Lab1\\Mesh.cpp",
@@ -298,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Texture.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Texture.h",
               "RelativeDocumentMoniker": "Lab1\\Texture.h",
@@ -310,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "camera.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\camera.h",
               "RelativeDocumentMoniker": "Lab1\\camera.h",
@@ -322,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Transform.h",
               "DocumentMoniker": "C:\\Users\\aaron\\Desktop\\glooper\\gp2\\Lab1\\Transform.h",
               "RelativeDocumentMoniker": "Lab1\\Transform.h",
