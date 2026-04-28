@@ -2,60 +2,60 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\Debug\Lab1.exe</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\Debug\Lab1.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\GP2-Lab3 Starter\GP2-Lab3 Starter\res\bricks.jpg</FullPath>
+      <FullPath>C:\Users\amber\Desktop\GP2-Lab3 Starter\GP2-Lab3 Starter\res\bricks.jpg</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\GP2-Lab3 Starter\GP2-Lab3 Starter\res\Water.jpg</FullPath>
+      <FullPath>C:\Users\amber\Desktop\GP2-Lab3 Starter\GP2-Lab3 Starter\res\Water.jpg</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\black.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\black.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\bluepikmin.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\bluepikmin.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\house.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\house.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\pikman.jpg</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\pikman.jpg</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\redpikmin.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\redpikmin.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\screwer.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\screwer.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\screwerUV.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\screwerUV.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\sky.png</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\sky.png</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\screwer.exr</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\screwer.exr</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\shader.frag</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\shader.frag</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\shader.vert</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\shader.vert</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\shadow.frag</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\shadow.frag</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\res\shadow.vert</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\res\shadow.vert</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\Lab1\shadow.frag</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\Lab1\shadow.frag</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\aaron\Desktop\glooper\gp2\Lab1\shadow.vert</FullPath>
+      <FullPath>C:\Users\amber\Desktop\gamesProgramming\gp2\Lab1\shadow.vert</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

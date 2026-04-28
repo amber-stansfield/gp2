@@ -41,6 +41,8 @@ private:
 	void processInput();
 	void gameLoop();
 	void drawGame();
+	void setShaderParams(Object obj);
+	void shadowPass(float nearPlane, float farPlane, glm::vec3 lightPos);
 	void PhysicsUpdate();
 	void instanceModels();
 

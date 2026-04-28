@@ -148,27 +148,17 @@ void MainGame::PhysicsUpdate()
 	
 }
 
-void MainGame::drawGame()
+void MainGame::shadowPass(float nearPlane, float farPlane, glm::vec3 lightPos)
 {
-	Sleep(5.0f);
-	_gameDisplay.clearDisplay(0.13f, 0.6f, 0.71f, 0.0f);
-
-	//glEnable(GL_CULL_FACE);
-	//glCullFace(GL_BACK);
-
-	glm::vec3 lightPos = light1.position;
-	float nearPlane = 0.1f;
-	float farPlane  = 5000.0f;
-
 	glm::mat4 shadowProj = glm::perspective(glm::radians(90.0f), 1.0f, nearPlane, farPlane);
 
 	std::vector<glm::mat4> shadowTransforms;
-	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 1, 0, 0), glm::vec3(0,-1, 0)));
-	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(-1, 0, 0), glm::vec3(0,-1, 0)));
-	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0, 1, 0), glm::vec3(0, 0, 1)));
-	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0,-1, 0), glm::vec3(0, 0,-1)));
-	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0, 0, 1), glm::vec3(0,-1, 0)));
-	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3( 0, 0,-1), glm::vec3(0,-1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(1, 0, 0), glm::vec3(0, -1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(-1, 0, 0), glm::vec3(0, -1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(0, 1, 0), glm::vec3(0, 0, 1)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(0, -1, 0), glm::vec3(0, 0, -1)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(0, 0, 1), glm::vec3(0, -1, 0)));
+	shadowTransforms.push_back(shadowProj * glm::lookAt(lightPos, lightPos + glm::vec3(0, 0, -1), glm::vec3(0, -1, 0)));
 
 	glEnable(GL_DEPTH_TEST);
 
@@ -201,8 +191,48 @@ void MainGame::drawGame()
 
 	light1.shadow.unbind();
 	glViewport(0, 0, _gameDisplay.getScreenWidth(), _gameDisplay.getScreenHeight());
+}
 
+void MainGame::setShaderParams(Object obj)
+{
+	if (obj.getID() == floor->getID()) {
+		glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 10.0f);
 
+	}
+	else {
+
+		glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 1.0f);
+	}
+	if (obj.getID() == wibbleCube->getID()) {
+		glUniform1f(glGetUniformLocation(shader.program, "wibble"), 1);
+	}
+	else {
+
+		glUniform1f(glGetUniformLocation(shader.program, "wibble"), 0.0f);
+	}
+	if (obj.getID() == light->getID())
+	{
+		glUniform1f(glGetUniformLocation(shader.program, "texMult"), 1000.0f);
+	}
+	else {
+
+		glUniform1f(glGetUniformLocation(shader.program, "texMult"), 1.0f);
+	}
+}
+
+void MainGame::drawGame()
+{
+	Sleep(5.0f);
+	_gameDisplay.clearDisplay(0.13f, 0.6f, 0.71f, 0.0f);
+
+	//glEnable(GL_CULL_FACE);
+	//glCullFace(GL_BACK);
+
+	glm::vec3 lightPos = light1.position;
+	float nearPlane = 0.1f;
+	float farPlane  = 5000.0f;
+
+	shadowPass(nearPlane, farPlane, lightPos);
 
 
 	shader.Bind();
@@ -221,9 +251,6 @@ void MainGame::drawGame()
 
 
 
-	//glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 1.0f);
-
-	//glUniform1f(glGetUniformLocation(shader.program, "wibble"), 0.0f);
 
 	glUniform1f(glGetUniformLocation(shader.program, "counter"), counter);
 
@@ -233,29 +260,7 @@ void MainGame::drawGame()
 
 	for (auto& obj : scene1.objects) {
 
-		if (obj->getID() == floor->getID()) {
-			glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 10.0f);
-
-		}
-		else {
-
-			glUniform1f(glGetUniformLocation(shader.program, "UVScale"), 1.0f);
-		}
-		if (obj->getID() == wibbleCube->getID()) {
-			glUniform1f(glGetUniformLocation(shader.program, "wibble"), 1);
-		}
-		else {
-
-			glUniform1f(glGetUniformLocation(shader.program, "wibble"), 0.0f);
-		}
-		if (obj->getID() == light->getID())
-		{
-			glUniform1f(glGetUniformLocation(shader.program, "texMult"), 1000.0f);
-		}
-		else {
-
-			glUniform1f(glGetUniformLocation(shader.program, "texMult"), 1.0f);
-		}
+		setShaderParams(*obj);
 
 		shader.setMat4("model", obj->getTransform()->GetModel());
 		//glUniformMatrix4fv(glGetUniformLocation(shader.program, "model"),1,GL_FALSE, glm::value_ptr(obj->getTransform()->GetModel()));
@@ -264,11 +269,7 @@ void MainGame::drawGame()
 		obj->getMesh()->draw();
 	}
 
-
-
 	counter = counter + 1.0f * (frameTime * 0.001);
-
-
 
 
 	_gameDisplay.swapBuffer();
